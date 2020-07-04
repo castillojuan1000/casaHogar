@@ -2,24 +2,28 @@ import React from "react"
 import './App.css';
 import "tailwindcss/dist/base.css"
 import AnimationRevealPage from "helpers/AnimationRevealPage"
-import Hero from "components/hero/BackgroundAsImageWithCenteredContent"
-import About from "components/features/TwoColSingleFeatureWithStats2"
-import Staff from 'components/testimonials/ThreeColumnWithProfileImage'
-import Pilares from 'components/features/VerticalWithAlternateImageAndText'
-import FAQ from 'components/faqs/TwoColumnPrimaryBackground'
-import Contact from 'components/forms/TwoColContactUsWithIllustrationFullForm'
-import Footer from 'components/footers/MiniCenteredFooter'
+
+//componets 
+import Home from 'components/finalDraft/HomePage'
+import Pilares from 'components/finalDraft/Pillares'
+import FAQs from 'components/finalDraft/FAQs'
+import ContactUs from 'components/finalDraft/ContactUs'
+
+//Routers 
+import { Switch, Route } from 'react-router-dom'
+
+
 
 function App() {
   return (
     <AnimationRevealPage>
-      <Hero />
-      <About />
-      <Staff />
-      <Pilares />
-      <FAQ />
-      <Contact />
-      <Footer />
+      <Switch>
+        <Route exact path='/' component={Home} />
+        <Route exact path='/pilares' component={Pilares} />
+        <Route exact path='/faqs' component={FAQs} />
+        <Route exact path='/contact' component={ContactUs} />
+      </Switch>
+
     </AnimationRevealPage>
 
   )

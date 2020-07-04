@@ -1,7 +1,11 @@
 import React from "react";
 import tw from "twin.macro";
 import styled from "styled-components";
-import {Container as ContainerBase } from "components/misc/Layouts.js"
+
+//Router Link
+import { Link as RouterLink } from 'react-router-dom'
+
+import { Container as ContainerBase } from "components/misc/Layouts.js"
 import logo from "../../images/logo.svg";
 import { ReactComponent as FacebookIcon } from "../../images/facebook-icon.svg";
 import { ReactComponent as TwitterIcon } from "../../images/twitter-icon.svg";
@@ -39,11 +43,29 @@ export default () => {
             <LogoText>Treact</LogoText>
           </LogoContainer>
           <LinksContainer>
-            <Link href="#">Home</Link>
-            <Link href="#">About</Link>
-            <Link href="#">Contact Us</Link>
-            <Link href="#">Blog</Link>
-            <Link href="#">Reviews</Link>
+            <Link>
+              <RouterLink to='/'>
+                Home
+            </RouterLink>
+            </Link>
+
+            <Link>
+              <RouterLink to='/pilares'>
+                Pilares
+              </RouterLink>
+            </Link>
+
+            <Link>
+              <RouterLink to='/faqs'>
+                Preguntas
+              </RouterLink>
+            </Link>
+
+            <Link>
+              <RouterLink to='/contact'>
+                Contactanos
+              </RouterLink>
+            </Link>
           </LinksContainer>
           <SocialLinksContainer>
             <SocialLink href="https://facebook.com">

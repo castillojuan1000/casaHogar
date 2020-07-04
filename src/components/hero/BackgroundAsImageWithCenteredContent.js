@@ -3,6 +3,9 @@ import tw from "twin.macro";
 import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
 
+//Router Link
+import { Link as RouterLink } from 'react-router-dom'
+
 import Header, { NavLink, NavLinks, PrimaryLink as PrimaryLinkBase, LogoLink, NavToggle, DesktopNavLinks } from "../headers/light.js";
 
 const StyledHeader = styled(Header)`
@@ -38,23 +41,36 @@ const PrimaryAction = tw.button`rounded-full px-8 py-3 mt-10 text-sm sm:text-bas
 export default () => {
   const navLinks = [
     <NavLinks key={1}>
-      <NavLink href="#">
-        About
+
+      <NavLink >
+        <RouterLink to='/'>
+          Home
+        </RouterLink>
       </NavLink>
-      <NavLink href="#">
-        Blog
+
+      <NavLink>
+        <RouterLink to='pilares'>
+          Pilares
+        </RouterLink>
       </NavLink>
-      <NavLink href="#">
-        Locations
+
+      <NavLink >
+        <RouterLink to='/faqs'>
+          Preguntas
+        </RouterLink>
       </NavLink>
-      <NavLink href="#">
-        Pricing
+
+      <NavLink>
+        <RouterLink to='/contact'>
+          contactanos
+        </RouterLink>
       </NavLink>
+
     </NavLinks>,
     <NavLinks key={2}>
-      <PrimaryLink href="/#">
+      {/* <PrimaryLink href="/#">
         Hire Us
-      </PrimaryLink>
+      </PrimaryLink> */}
     </NavLinks>
   ];
 
@@ -65,9 +81,9 @@ export default () => {
         <StyledHeader links={navLinks} />
         <Content>
           <Heading>
-              Book Music & Comedy Events
+            Casa Hogar
               <br />
-              anywhere in New York
+              Secret Heart of Jesus
           </Heading>
           <PrimaryAction>Search Events Near Me</PrimaryAction>
         </Content>
