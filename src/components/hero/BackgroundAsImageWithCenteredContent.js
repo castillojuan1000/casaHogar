@@ -2,6 +2,7 @@ import React from "react";
 import tw from "twin.macro";
 import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
+import MainBackground1 from "../../images/MainBackground3.png";
 
 //Router Link
 import { Link as RouterLink } from 'react-router-dom'
@@ -21,10 +22,10 @@ const StyledHeader = styled(Header)`
 const PrimaryLink = tw(PrimaryLinkBase)`rounded-full`
 const Container = styled.div`
   ${tw`relative -mx-8 -mt-8 bg-center bg-cover h-screen min-h-144`}
-  background-image: url("https://images.unsplash.com/photo-1536300007881-7e482242baa5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=80");
+  background-image: url(${MainBackground1});
 `;
 
-const OpacityOverlay = tw.div`z-10 absolute inset-0 bg-black opacity-75`;
+const OpacityOverlay = tw.div`z-10 absolute inset-0 bg-black opacity-50`;
 
 const HeroContainer = tw.div`z-20 relative px-6 sm:px-8 mx-auto h-full flex flex-col`;
 const Content = tw.div`px-4 flex flex-1 flex-col justify-center items-center`;
@@ -85,7 +86,7 @@ export default () => {
               <br />
               Secret Heart of Jesus
           </Heading>
-          <PrimaryAction>Search Events Near Me</PrimaryAction>
+          <PrimaryAction>Learn More</PrimaryAction>
         </Content>
       </HeroContainer>
     </Container>
