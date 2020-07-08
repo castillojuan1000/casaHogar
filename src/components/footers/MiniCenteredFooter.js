@@ -6,7 +6,7 @@ import styled from "styled-components";
 import { Link as RouterLink } from 'react-router-dom'
 
 import { Container as ContainerBase } from "components/misc/Layouts.js"
-import logo from "../../images/logo.svg";
+import logo from "../../images/chLogo.png";
 import { ReactComponent as FacebookIcon } from "../../images/facebook-icon.svg";
 import { ReactComponent as TwitterIcon } from "../../images/twitter-icon.svg";
 import { ReactComponent as YoutubeIcon } from "../../images/youtube-icon.svg";
@@ -40,7 +40,6 @@ export default () => {
         <Row>
           <LogoContainer>
             <LogoImg src={logo} />
-            <LogoText>Treact</LogoText>
           </LogoContainer>
           <LinksContainer>
             <Link>
