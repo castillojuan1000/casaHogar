@@ -16,6 +16,7 @@ import { Switch, Route } from 'react-router-dom'
 
 function App() {
   return (
+
     <AnimationRevealPage>
       <Switch>
         <Route exact path='/' component={Home} />
@@ -25,6 +26,7 @@ function App() {
       </Switch>
 
     </AnimationRevealPage>
+
 
   )
 }

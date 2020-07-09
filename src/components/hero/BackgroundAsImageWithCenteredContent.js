@@ -21,11 +21,11 @@ const StyledHeader = styled(Header)`
 
 const PrimaryLink = tw(PrimaryLinkBase)`rounded-full`
 const Container = styled.div`
-  ${tw`relative -mx-8 -mt-8 bg-center bg-cover h-screen min-h-144`}
+  ${tw`relative -mx-8 bg-center bg-cover h-screen min-h-144`}
   background-image: url(${MainBackground1});
 `;
 
-const OpacityOverlay = tw.div`z-10 absolute inset-0 bg-black opacity-50`;
+const OpacityOverlay = tw.div`z-10 absolute inset-0 bg-black opacity-25`;
 
 const HeroContainer = tw.div`z-20 relative px-6 sm:px-8 mx-auto h-full flex flex-col`;
 const Content = tw.div`px-4 flex flex-1 flex-col justify-center items-center`;
