@@ -32,7 +32,7 @@ const SocialLink = styled.a`
   }
 `;
 
-const CopyrightText = tw.p`text-center my-4 font-medium tracking-wide text-sm text-gray-600`
+const CopyrightText = tw.p`text-center my-4 mb-12 font-medium tracking-wide text-sm text-gray-600`
 export default () => {
   return (
     <Container>
