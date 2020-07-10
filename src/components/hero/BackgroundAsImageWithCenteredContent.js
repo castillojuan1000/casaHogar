@@ -10,16 +10,16 @@ import { Link as RouterLink } from 'react-router-dom'
 import Header, { NavLink, NavLinks, PrimaryLink as PrimaryLinkBase, LogoLink, NavToggle, DesktopNavLinks } from "../headers/light.js";
 
 const StyledHeader = styled(Header)`
-  ${tw`pt-8 max-w-none w-full`}
+  ${tw`pt-8 px-4 max-w-none w-full`}
   ${DesktopNavLinks} ${NavLink}, ${LogoLink} {
-    ${tw`text-gray-100 hover:border-gray-300 hover:text-gray-300`}
+    ${tw`text-gray-100 hover:border-primary-500 hover:text-primary-500`}
   }
   ${NavToggle}.closed {
     ${tw`text-gray-100 hover:text-primary-500`}
   }
 `;
 
-const PrimaryLink = tw(PrimaryLinkBase)`rounded-full`
+
 const Container = styled.div`
   ${tw`relative -mx-8 bg-center bg-cover h-screen min-h-144`}
   background-image: url(${MainBackground1});

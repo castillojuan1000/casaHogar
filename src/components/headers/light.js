@@ -34,10 +34,10 @@ export const PrimaryLink = tw(NavLink)`
 `;
 
 export const LogoLink = styled(NavLink)`
-  ${tw`flex items-center text-center italic font-black border-b-0 text-sm! ml-0!`};
+  ${tw`flex items-center text-center italic font-black border-b-0 text-xs! ml-0!`};
 
   img {
-    ${tw`w-24 mr-3`}
+    ${tw`mr-3 w-16 md:w-16 lg:w-20 xl:w-24 `}
   }
 `;
 
@@ -45,6 +45,8 @@ export const MobileNavLinksContainer = tw.nav`flex flex-1 items-center justify-b
 export const NavToggle = tw.button`
   lg:hidden z-20 focus:outline-none hocus:text-primary-500 transition duration-300
 `;
+
+//this is the background for reponsive nav
 export const MobileNavLinks = motion.custom(styled.div`
   ${tw`lg:hidden z-10 fixed top-0 inset-x-0 mx-4 my-6 p-8 border text-center rounded-lg text-gray-900 bg-white`}
   ${NavLinks} {
@@ -126,7 +128,8 @@ const collapseBreakPointCssMap = {
   sm: {
     mobileNavLinks: tw`sm:hidden`,
     desktopNavLinks: tw`sm:flex`,
-    mobileNavLinksContainer: tw`sm:hidden`
+    mobileNavLinksContainer: tw`sm:hidden`,
+
   },
   md: {
     mobileNavLinks: tw`md:hidden`,
