@@ -1,12 +1,28 @@
 import React from "react";
 import styled from "styled-components";
 import tw from "twin.macro";
+import { css } from "styled-components/macro"; //eslint-disable-line
 import { ReactComponent as SvgDotPatternIcon } from "../../images/dot-pattern.svg";
 import { SectionHeading as HeadingTitle } from "../misc/Headings.js";
 
+//navbar
+import Header, { NavLink, NavLinks, LogoLink, NavToggle, DesktopNavLinks } from "../headers/light.js";
+import { Link as RouterLink } from 'react-router-dom'
+
+const StyledHeader = styled(Header)`
+  ${tw`pb-12  px-4 max-w-none w-full`}
+  ${DesktopNavLinks} ${NavLink}, ${LogoLink} {
+    ${tw`text-gray-800 hover:border-primary-500 hover:text-primary-500`}
+  }
+  ${NavToggle}.closed {
+    ${tw`text-gray-900 hover:text-primary-500`}
+  }
+`;
+
+
 const Container = tw.div`relative`;
 
-const SingleColumn = tw.div`max-w-screen-xl mx-auto py-20 lg:py-24`;
+const SingleColumn = tw.div`max-w-screen-xl mx-auto`;
 
 const HeadingInfoContainer = tw.div`flex flex-col items-center`;
 const HeadingDescription = tw.p`mt-4 font-medium text-gray-600 text-center max-w-sm`;
@@ -41,6 +57,41 @@ const SvgDotPattern4 = tw(
 )`absolute bottom-0 right-0 transform translate-x-20 rotate-90 -translate-y-24 -z-10 opacity-25 text-primary-500 fill-current w-24`;
 
 export default () => {
+  const navLinks = [
+    <NavLinks key={1}>
+
+      <NavLink >
+        <RouterLink to='/'>
+          Home
+        </RouterLink>
+      </NavLink>
+
+      <NavLink>
+        <RouterLink to='pilares'>
+          Pilares
+        </RouterLink>
+      </NavLink>
+
+      <NavLink >
+        <RouterLink to='/faqs'>
+          Preguntas
+        </RouterLink>
+      </NavLink>
+
+      <NavLink>
+        <RouterLink to='/contact'>
+          Contactanos
+        </RouterLink>
+      </NavLink>
+
+    </NavLinks>,
+    <NavLinks key={2}>
+      {/* <PrimaryLink href="/#">
+        Hire Us
+      </PrimaryLink> */}
+    </NavLinks>
+  ];
+
   const cards = [
     {
       imageSrc:
@@ -75,7 +126,9 @@ export default () => {
 
   return (
     <Container>
+
       <SingleColumn>
+        <StyledHeader links={navLinks} />
         <HeadingInfoContainer>
           <HeadingTitle>Popular Events</HeadingTitle>
           <HeadingDescription>
