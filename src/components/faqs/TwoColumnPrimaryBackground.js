@@ -2,19 +2,37 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import tw from "twin.macro";
 import styled, { css } from "styled-components/macro"; //eslint-disable-line
-import { Container, ContentWithPaddingXl } from "components/misc/Layouts.js";
+import { Container } from "components/misc/Layouts.js";
 import { SectionHeading, Subheading as SubheadingBase } from "components/misc/Headings.js";
 import { SectionDescription } from "components/misc/Typography.js";
 import { ReactComponent as ChevronDownIcon } from "feather-icons/dist/icons/chevron-down.svg";
 
-const PrimaryBackgroundContainer = tw(Container)`-mx-8 px-8 py-0 my-0 bg-primary-900 h-screen min-h-144 text-gray-100`;
+//navbar
+import Header, { NavLink, NavLinks, LogoLink, NavToggle, DesktopNavLinks } from "../headers/light.js";
+import { Link as RouterLink } from 'react-router-dom'
+
+const StyledHeader = styled(Header)`
+  ${tw`pb-4 lg:pb-12 px-8 lg:px-4 xl:px-4 max-w-none w-full`}
+  ${DesktopNavLinks} ${NavLink}, ${LogoLink} {
+    ${tw`text-gray-100 hover:border-primary-100 hover:text-primary-100`}
+  }
+  ${NavToggle}.closed {
+    ${tw`text-gray-100 hover:text-gray-400`}
+  }
+`;
+
+
+
+const PrimaryBackgroundContainer = tw(Container)`-mx-8 px-8 py-0 my-0 bg-primary-600 h-screen min-h-144 text-gray-100`;
+
+const ContentWithPaddingXl = tw.div`max-w-screen-xl mx-auto pt-4 lg:py-12`;
 
 const HeadingContainer = tw.div``;
-const Subheading = tw(SubheadingBase)`text-center text-gray-100 mb-4`;
-const Heading = tw(SectionHeading)``;
-const Description = tw(SectionDescription)`mx-auto text-center text-gray-300`;
+const Subheading = tw(SubheadingBase)`text-center  text-gray-100 mb-4`;
+const Heading = tw(SectionHeading)`text-2xl`;
+// const Description = tw(SectionDescription)`mx-auto text-center text-gray-300`;
 
-const FaqsContainer = tw.div`mt-10 sm:mt-16 w-full flex-1 lg:flex justify-between items-start max-w-screen-lg mx-auto`;
+const FaqsContainer = tw.div`mt-4 sm:mt-16 px-4 w-full flex-1 lg:flex justify-between items-start max-w-screen-lg mx-auto`;
 const FaqsColumn = tw.div`w-full lg:max-w-lg lg:mr-12 last:mr-0`;
 const Faq = tw.div`select-none cursor-pointer border-b-2 border-primary-300 hover:border-primary-500 transition-colors duration-300 py-6`;
 const Question = tw.div`flex justify-between items-center`;
@@ -28,6 +46,7 @@ const QuestionToggleIcon = styled(motion.span)`
 const Answer = tw(motion.div)`hidden text-sm font-normal mt-4 text-gray-300`;
 
 export default ({
+
   subheading = "",
   heading = "Frequently Asked Questions",
   description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -109,13 +128,50 @@ export default ({
 
     return null;
   });
+
+  const navLinks = [
+    <NavLinks key={1}>
+
+      <NavLink >
+        <RouterLink to='/'>
+          Home
+        </RouterLink>
+      </NavLink>
+
+      <NavLink>
+        <RouterLink to='pilares'>
+          Pilares
+        </RouterLink>
+      </NavLink>
+
+      <NavLink >
+        <RouterLink to='/faqs'>
+          Preguntas
+        </RouterLink>
+      </NavLink>
+
+      <NavLink>
+        <RouterLink to='/contact'>
+          Contactanos
+        </RouterLink>
+      </NavLink>
+
+    </NavLinks>,
+    <NavLinks key={2}>
+      {/* <PrimaryLink href="/#">
+        Hire Us
+      </PrimaryLink> */}
+    </NavLinks>
+  ];
+
   return (
     <PrimaryBackgroundContainer>
       <ContentWithPaddingXl>
+        <StyledHeader links={navLinks} />
         <HeadingContainer>
           {subheading && <Subheading>{subheading}</Subheading>}
           <Heading>{heading}</Heading>
-          <Description>{description}</Description>
+          {/* <Description>{description}</Description> */}
         </HeadingContainer>
         <FaqsContainer>
           <FaqsColumn>{faqCol1}</FaqsColumn>
