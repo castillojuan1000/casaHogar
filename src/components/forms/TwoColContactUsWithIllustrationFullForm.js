@@ -6,6 +6,22 @@ import { SectionHeading, Subheading as SubheadingBase } from "components/misc/He
 import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons.js";
 import EmailIllustrationSrc from "images/email-illustration.svg";
 
+//navbar
+import Header, { NavLink, NavLinks, LogoLink, NavToggle, DesktopNavLinks } from "../headers/light.js";
+import { Link as RouterLink } from 'react-router-dom'
+
+const StyledHeader = styled(Header)`
+  ${tw`py-8  px-4 md:px-0 lg:px-0 xl:px-0 max-w-screen-xl w-full`}
+  ${DesktopNavLinks} ${NavLink}, ${LogoLink} {
+    ${tw`text-gray-800 hover:border-primary-500 hover:text-primary-500`}
+  }
+  ${NavToggle}.closed {
+    ${tw`text-gray-900 hover:text-primary-500`}
+  }
+`;
+
+
+
 const Container = tw.div`relative min-h-screen`;
 const TwoColumn = tw.div`flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto py-20 md:py-24`;
 const Column = tw.div`w-full max-w-md mx-auto md:max-w-none md:mx-0`;
@@ -44,9 +60,46 @@ export default ({
 }) => {
   // The textOnLeft boolean prop can be used to display either the text on left or right side of the image.
 
+  const navLinks = [
+    <NavLinks key={1}>
+
+      <NavLink >
+        <RouterLink to='/'>
+          Home
+        </RouterLink>
+      </NavLink>
+
+      <NavLink>
+        <RouterLink to='pilares'>
+          Pilares
+        </RouterLink>
+      </NavLink>
+
+      <NavLink >
+        <RouterLink to='/faqs'>
+          Preguntas
+        </RouterLink>
+      </NavLink>
+
+      <NavLink>
+        <RouterLink to='/contact'>
+          Contactanos
+        </RouterLink>
+      </NavLink>
+
+    </NavLinks>,
+    <NavLinks key={2}>
+      {/* <PrimaryLink href="/#">
+        Hire Us
+      </PrimaryLink> */}
+    </NavLinks>
+  ];
+
   return (
     <Container>
+      <StyledHeader links={navLinks} />
       <TwoColumn>
+
         <ImageColumn>
           <Image imageSrc={EmailIllustrationSrc} />
         </ImageColumn>
