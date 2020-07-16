@@ -23,16 +23,15 @@ const StyledHeader = styled(Header)`
 
 
 
-const PrimaryBackgroundContainer = tw(Container)`-mx-8 px-8 py-0 my-0 bg-primary-600 h-screen min-h-144 text-gray-100`;
-
+const PrimaryBackgroundContainer = tw(Container)`-mx-8 px-8 h-auto  lg:h-screen xl:h-screen bg-primary-900 text-gray-100`;
 const ContentWithPaddingXl = tw.div`max-w-screen-xl mx-auto pt-4 lg:py-12`;
 
 const HeadingContainer = tw.div``;
-const Subheading = tw(SubheadingBase)`text-center  text-gray-100 mb-4`;
-const Heading = tw(SectionHeading)`text-2xl`;
-// const Description = tw(SectionDescription)`mx-auto text-center text-gray-300`;
+const Subheading = tw(SubheadingBase)`text-center text-gray-100 mb-4`;
+const Heading = tw(SectionHeading)``;
+const Description = tw(SectionDescription)`mx-auto px-6 text-center text-gray-300`;
 
-const FaqsContainer = tw.div`mt-4 sm:mt-16 px-4 w-full flex-1 lg:flex justify-between items-start max-w-screen-lg mx-auto`;
+const FaqsContainer = tw.div`mt-10 sm:mt-16 px-6 w-full flex-1 lg:flex justify-between items-start max-w-screen-lg mx-auto`;
 const FaqsColumn = tw.div`w-full lg:max-w-lg lg:mr-12 last:mr-0`;
 const Faq = tw.div`select-none cursor-pointer border-b-2 border-primary-300 hover:border-primary-500 transition-colors duration-300 py-6`;
 const Question = tw.div`flex justify-between items-center`;
@@ -44,7 +43,6 @@ const QuestionToggleIcon = styled(motion.span)`
   }
 `;
 const Answer = tw(motion.div)`hidden text-sm font-normal mt-4 text-gray-300`;
-
 export default ({
 
   subheading = "",
@@ -171,7 +169,7 @@ export default ({
         <HeadingContainer>
           {subheading && <Subheading>{subheading}</Subheading>}
           <Heading>{heading}</Heading>
-          {/* <Description>{description}</Description> */}
+          <Description>{description}</Description>
         </HeadingContainer>
         <FaqsContainer>
           <FaqsColumn>{faqCol1}</FaqsColumn>
