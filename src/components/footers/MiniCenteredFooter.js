@@ -15,13 +15,13 @@ import { ReactComponent as InstagramIcon } from "../../images/instagram.svg"
 const Container = tw(ContainerBase)`bg-purple-700 text-gray-100 -mx-8 -mb-8`
 const Content = tw.div`max-w-screen-xl mx-auto py-0 lg:py-0`;
 
-const Row = tw.div`flex items-center justify-center flex-col px-8`
+const Row = tw.div`flex items-center justify-center flex-col`
 
 const LogoContainer = tw.div`flex items-center justify-center md:justify-start`;
 const LogoImg = tw.img`w-24 py-4`;
 // const LogoText = tw.h5`ml-2 text-2xl font-black tracking-wider`;
 
-const LinksContainer = tw.div`mt-0 font-medium flex flex-wrap justify-center items-center flex-col sm:flex-row`
+const LinksContainer = tw.div`mt-0 font-medium flex flex-wrap justify-center items-center flex-row sm:flex-row`
 const Link = tw.a`border-b-2 border-transparent hocus:text-gray-300 hocus:border-gray-300 pb-1 transition duration-300 mt-2 mx-4`;
 
 const SocialLinksContainer = tw.div`mt-4`;
