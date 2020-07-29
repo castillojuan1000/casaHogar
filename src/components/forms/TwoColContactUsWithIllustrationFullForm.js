@@ -11,7 +11,7 @@ import Header, { NavLink, NavLinks, LogoLink, NavToggle, DesktopNavLinks } from 
 import { Link as RouterLink } from 'react-router-dom'
 
 const StyledHeader = styled(Header)`
-  ${tw`py-8  px-4 md:px-0 lg:px-0 xl:px-0 max-w-screen-xl w-full`}
+  ${tw`py-8  px-8 md:px-0 lg:px-0 xl:px-0 max-w-screen-xl w-full`}
   ${DesktopNavLinks} ${NavLink}, ${LogoLink} {
     ${tw`text-gray-800 hover:border-primary-500 hover:text-primary-500`}
   }
