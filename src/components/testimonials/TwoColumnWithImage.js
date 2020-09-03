@@ -4,8 +4,8 @@ import styled from "styled-components";
 import tw from "twin.macro";
 import { css } from "styled-components/macro"; //eslint-disable-line
 import { SectionHeading as HeadingTitle } from "../misc/Headings.js";
-import { ReactComponent as QuotesLeftIcon } from "../../images/quotes-l.svg";
-import { ReactComponent as QuotesRightIcon } from "../../images/quotes-r.svg";
+// import { ReactComponent as QuotesLeftIcon } from "../../images/quotes-l.svg";
+// import { ReactComponent as QuotesRightIcon } from "../../images/quotes-r.svg";
 import { ReactComponent as ArrowLeftIcon } from "../../images/arrow-left-2-icon.svg";
 import { ReactComponent as ArrowRightIcon } from "../../images/arrow-right-2-icon.svg";
 import { ReactComponent as SvgDecoratorBlob1 } from "../../images/svg-decorator-blob-4.svg";
@@ -27,15 +27,15 @@ const ImageContainer = styled.div`
     ${tw`rounded`}
   }
 `;
-const TextContainer = tw.div`md:mx-3 lg:mx-6 md:w-6/12 py-4 flex flex-col justify-between`;
+const TextContainer = tw.div`md:mx-3 lg:mx-6 md:w-6/12 py-4 flex flex-col`;
 const QuoteContainer = tw.div`relative p-6 md:p-8 lg:p-10 mt-4 md:mt-0`;
 const Quote = tw.blockquote`text-center md:text-left font-medium text-xl lg:text-2xl xl:text-3xl`;
 const CustomerInfo = tw.div`px-5 lg:px-10 text-center md:text-left mt-4 md:mt-0`;
 const CustomerName = tw.h5`font-bold text-lg lg:text-xl xl:text-2xl text-primary-500`;
 const CustomerTitle = tw.p`font-medium text-sm`;
 
-const QuotesLeft = tw(QuotesLeftIcon)`w-8 h-8 lg:w-10 lg:h-10 text-primary-500 absolute top-0 left-0`;
-const QuotesRight = tw(QuotesRightIcon)`w-8 h-8 lg:w-10 lg:h-10 text-primary-500 absolute bottom-0 right-0`;
+// const QuotesLeft = tw(QuotesLeftIcon)`w-8 h-8 lg:w-10 lg:h-10 text-primary-500 absolute top-0 left-0`;
+// const QuotesRight = tw(QuotesRightIcon)`w-8 h-8 lg:w-10 lg:h-10 text-primary-500 absolute bottom-0 right-0`;
 
 const SliderControlButtonContainer = styled.div`
   ${tw`absolute top-0 h-full flex items-end md:items-center z-20`}
@@ -79,32 +79,32 @@ export default () => {
       imageSrc:
         "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3.25&w=512&h=512&q=80",
       quote:
-        "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.",
-      customerName: "Charlotte Hale",
-      customerTitle: "CEO, Delos Inc."
+        "Esto seria el testimonio de la madre de como este proyecto surgio y como empezo y que la llamo a llevar a este proyecto",
+      customerName: "Madre Vicky",
+      customerTitle: "Fundadora, Casa Hogar"
     },
     {
       imageSrc:
         "https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=512&h=512&q=80",
       quote:
-        "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.",
-      customerName: "Adam Cuppy",
-      customerTitle: "Founder, EventsNYC"
+        "Es un lugar donde la persona viene a encontrarse con Dios o sanarse de las addicciones. Ofresemos ayuda a las personas con adiccion, personas que quieren tener un encuentro con Dios, y ayuda espiritual a la familia",
+      customerName: "Que es Casa Hogar?",
+      customerTitle: "Fundada en 2018"
     },
     {
       imageSrc:
         "https://images.unsplash.com/photo-1580852300654-03c803a14e24?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4.25&w=512&h=512&q=80",
       quote:
-        "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.",
-      customerName: "Steven Marcetti",
-      customerTitle: "Event Manager, Brite"
+        "Ofresemos ayuda y acompañamiento espiritual a las personas con cualquier tipo de addicion, (tambien podemos presentar un pequeño explicacion de los pasos que se llevan para lograr este proposito)",
+      customerName: "Que hacemos?",
+      // customerTitle: "Event Manager, Brite"
     }
   ];
   return (
     <Container>
       <Content>
         <HeadingInfoContainer>
-          <HeadingTitle>Our Awesome Customers</HeadingTitle>
+          <HeadingTitle>Quienes Somos</HeadingTitle>
           <HeadingDescription></HeadingDescription>
         </HeadingInfoContainer>
         <TestimonialSliderContainer>
@@ -115,15 +115,19 @@ export default () => {
                   <img src={testimonial.imageSrc} alt={testimonial.customerName} />
                 </ImageContainer>
                 <TextContainer>
-                  <QuoteContainer>
-                    <QuotesLeft />
-                    <Quote>{testimonial.quote}</Quote>
-                    <QuotesRight />
-                  </QuoteContainer>
                   <CustomerInfo>
                     <CustomerName>{testimonial.customerName}</CustomerName>
                     <CustomerTitle>{testimonial.customerTitle}</CustomerTitle>
                   </CustomerInfo>
+                  <QuoteContainer>
+                    {/* <QuotesLeft /> */}
+                    <Quote>{testimonial.quote}</Quote>
+                    {/* <QuotesRight /> */}
+                  </QuoteContainer>
+                  {/* <CustomerInfo>
+                    <CustomerName>{testimonial.customerName}</CustomerName>
+                    <CustomerTitle>{testimonial.customerTitle}</CustomerTitle>
+                  </CustomerInfo> */}
                 </TextContainer>
               </Testimonial>
             ))}
