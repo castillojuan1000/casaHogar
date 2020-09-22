@@ -75,16 +75,16 @@ export default ({
   imageShadow = false,
   subheading = "Testimonials",
   heading = "Para Quien Es ",
-  description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam.",
+  description = "Para todos los que necesiten acompañamiento espiritual, sanacion de addicciones, o simplemente para la persona que necesite un tiempo de oracion y crecimiento espiritual",
   textOnLeft = false,
   testimonials = [
     {
       stars: 5,
       profileImageSrc:
         "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3.25&w=512&h=512&q=80",
-      heading: "Problemas de Addiccion",
+      heading: "Problemas De Addiccion",
       quote:
-        "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
+        "La principal mision del programa es ayudar a la persona con sus problemas de addiccion, por medio de un procceso de oracion, trabajo, estudio de bliblia por mesionar algunos. para entrar se necesita voluntariamente acceptar el programa, la decision de cambiar el rumbo de sus vidas para luchar por sus sueños, la disposicion de la persona y ser mayor de 18 años.",
       customerName: "Charlotte Hale",
       customerTitle: "CEO, Delos Inc."
     },
@@ -93,6 +93,16 @@ export default ({
       profileImageSrc:
         "https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=512&h=512&q=80",
       heading: "Acompañamiento Espiritual",
+      quote:
+        "Sinor Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+      customerName: "Adam Cuppy",
+      customerTitle: "Founder, EventsNYC"
+    },
+    {
+      stars: 5,
+      profileImageSrc:
+        "https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=512&h=512&q=80",
+      heading: "Oracion Y Crecimiento Espiritual",
       quote:
         "Sinor Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
       customerName: "Adam Cuppy",

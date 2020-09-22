@@ -24,6 +24,10 @@ const LogoImg = tw.img`w-24 py-4`;
 const LinksContainer = tw.div`mt-0 font-medium flex flex-wrap justify-center items-center flex-row sm:flex-row`
 const Link = tw.a`border-b-2 border-transparent hocus:text-gray-300 hocus:border-gray-300 pb-1 transition duration-300 mt-2 mx-4`;
 
+const ContactContainer = tw.div`my-3 flex justify-center flex-col items-center`
+const Phone = tw.div` text-gray-100 text-sm font-bold`
+const Address = tw.div` text-gray-100 text-sm font-bold`
+
 const SocialLinksContainer = tw.div`mt-4`;
 const SocialLink = styled.a`
   ${tw`cursor-pointer inline-block text-gray-100 hover:text-gray-500 transition duration-300 mx-4`}
@@ -66,6 +70,10 @@ export default () => {
               </RouterLink>
             </Link>
           </LinksContainer>
+          <ContactContainer>
+            <Phone>Tel: 679-4450-3454</Phone>
+            <Address> Direccion: 355 Glen Rd NE, Conyers GA 30013</Address>
+          </ContactContainer>
           <SocialLinksContainer>
             <SocialLink href="https://www.facebook.com/CasaHogarSCDJ/" target="_blank">
               <FacebookIcon />

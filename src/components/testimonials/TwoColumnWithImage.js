@@ -95,7 +95,7 @@ export default () => {
       imageSrc:
         "https://images.unsplash.com/photo-1580852300654-03c803a14e24?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4.25&w=512&h=512&q=80",
       quote:
-        "Ofresemos ayuda y acompañamiento espiritual a las personas con cualquier tipo de addicion, (tambien podemos presentar un pequeño explicacion de los pasos que se llevan para lograr este proposito)",
+        "Ofresemos ayuda y acompañamiento espiritual a las personas con cualquier tipo de addicion. De igual manera, se ofrece la sanacion atravez de un encuentro personal con el Amor Misericordioso de Dios, por medio de una formacion de 7 pilares que ayuda a la persona a sanar el espiritu, fisico y mente.",
       customerName: "Que hacemos?",
       // customerTitle: "Event Manager, Brite"
     }

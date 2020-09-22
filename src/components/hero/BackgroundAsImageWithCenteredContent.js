@@ -84,7 +84,7 @@ export default () => {
           <Heading>
             Casa Hogar
               <br />
-              Secret Heart of Jesus
+              Sagrado Corazón de Jesus
           </Heading>
           <PrimaryAction>Learn More</PrimaryAction>
         </Content>
