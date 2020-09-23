@@ -18,15 +18,15 @@ const Content = tw.div`max-w-screen-xl mx-auto py-0 lg:py-0`;
 const Row = tw.div`flex items-center justify-center flex-col`
 
 const LogoContainer = tw.div`flex items-center justify-center md:justify-start`;
-const LogoImg = tw.img`w-24 py-4`;
+const LogoImg = tw.img`w-24 py-4 hidden md:inline lg:inline xl:inline`;
 // const LogoText = tw.h5`ml-2 text-2xl font-black tracking-wider`;
 
-const LinksContainer = tw.div`mt-0 font-medium flex flex-wrap justify-center items-center flex-row sm:flex-row`
+const LinksContainer = tw.div`mt-3 md:mt-0 lg:mt-0 xl:mt-0 font-medium flex flex-wrap justify-center items-center flex-row sm:flex-row`
 const Link = tw.a`border-b-2 border-transparent hocus:text-gray-300 hocus:border-gray-300 pb-1 transition duration-300 mt-2 mx-4`;
 
 const ContactContainer = tw.div`my-3 flex justify-center flex-col items-center`
-const Phone = tw.div` text-gray-100 text-sm font-bold`
-const Address = tw.div` text-gray-100 text-sm font-bold`
+const Phone = tw.div` text-gray-100 text-sm font-bold border-b-2 border-transparent hocus:text-gray-300 hocus:border-gray-300 pb-1 transition duration-300 mt-2 mx-4`
+const Address = tw.div` text-gray-100 text-sm font-bold border-b-2 border-transparent hocus:text-gray-300 hocus:border-gray-300 pb-1 transition duration-300 mt-2 mx-4`
 
 const SocialLinksContainer = tw.div`mt-4`;
 const SocialLink = styled.a`
@@ -71,8 +71,9 @@ export default () => {
             </Link>
           </LinksContainer>
           <ContactContainer>
-            <Phone>Tel: 679-4450-3454</Phone>
-            <Address> Direccion: 355 Glen Rd NE, Conyers GA 30013</Address>
+            <Phone>Tel: <a
+              href="tel:+1-678-227-3968">678-227-3968</a></Phone>
+            <Address> Direccion: <a href="https://www.google.com/maps/search/?api=1&query=33.649755,-83.964471" target="_blank" rel="noopener noreferrer">355 Glen Rd NE, Conyers GA 30013</a></Address>
           </ContactContainer>
           <SocialLinksContainer>
             <SocialLink href="https://www.facebook.com/CasaHogarSCDJ/" target="_blank">
