@@ -8,6 +8,7 @@ import { SectionHeading as HeadingTitle } from "../misc/Headings.js";
 //fotos
 import Oracion from "../../images/oracion.png";
 import Apostolado from "../../images/apostolado.png";
+import Trabajo from '../../images/casahogar/trabajo.png'
 
 //navbar
 import Header, { NavLink, NavLinks, LogoLink, NavToggle, DesktopNavLinks } from "../headers/light.js";
@@ -115,8 +116,7 @@ export default () => {
     },
 
     {
-      imageSrc:
-        "https://images.unsplash.com/photo-1509824227185-9c5a01ceba0d?ixlib=rb-1.2.1&auto=format&fit=crop&w=658&q=80",
+      imageSrc: Trabajo,
 
       title: "Trabajo",
       description:
@@ -150,8 +150,7 @@ export default () => {
 
     },
     {
-      imageSrc:
-        "https://images.unsplash.com/photo-1509824227185-9c5a01ceba0d?ixlib=rb-1.2.1&auto=format&fit=crop&w=658&q=80",
+      imageSrc: Apostolado,
 
       title: "Servicio Misionero",
       description:
