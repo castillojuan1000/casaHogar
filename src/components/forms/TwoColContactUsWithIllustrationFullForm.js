@@ -5,6 +5,7 @@ import { css } from "styled-components/macro"; //eslint-disable-line
 import { SectionHeading, Subheading as SubheadingBase } from "components/misc/Headings.js";
 import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons.js";
 import EmailIllustrationSrc from "images/email-illustration.svg";
+import emailjs from 'emailjs-com';
 
 //navbar
 import Header, { NavLink, NavLinks, LogoLink, NavToggle, DesktopNavLinks } from "../headers/light.js";
@@ -50,9 +51,9 @@ const Textarea = styled(Input).attrs({ as: "textarea" })`
 const SubmitButton = tw(PrimaryButtonBase)`inline-block mt-8`
 
 export default ({
-  subheading = "Contact Us",
-  heading = <>Feel free to <span tw="text-primary-500">get in touch</span><wbr /> with us.</>,
-  description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  subheading = "Contactanos",
+  heading = <>Sientete libre <span tw="text-primary-500">de contactarnos</span></>,
+  description = "Si usted tiene alguna pregunta acerca del programa, por favor no dude en contactarme para más información.",
   submitButtonText = "Send",
   formAction = "#",
   formMethod = "get",
@@ -89,11 +90,24 @@ export default ({
 
     </NavLinks>,
     <NavLinks key={2}>
-      {/* <PrimaryLink href="/#">
-        Hire Us
-      </PrimaryLink> */}
     </NavLinks>
   ];
+
+  function sendEmail(e) {
+    e.preventDefault();
+
+    emailjs.sendForm('castillojuan1000', 'template_5yr6ait', e.target, 'user_8JfUghHikE5u11h9x0oT1')
+      .then((result) => {
+        console.log(result.text);
+      }, (error) => {
+        console.log(error.text);
+      });
+
+    e.target.reset();
+  }
+
+
+
 
   return (
     <Container>
@@ -108,11 +122,11 @@ export default ({
             {subheading && <Subheading>{subheading}</Subheading>}
             <Heading>{heading}</Heading>
             {description && <Description>{description}</Description>}
-            <Form action={formAction} method={formMethod}>
-              <Input type="email" name="email" placeholder="Your Email Address" />
-              <Input type="text" name="name" placeholder="Full Name" />
-              <Input type="text" name="subject" placeholder="Subject" />
-              <Textarea name="message" placeholder="Your Message Here" />
+            <Form onSubmit={sendEmail}>
+              <Input type="email" name="email" placeholder="Correo electronico / Email" />
+              <Input type="text" name="name" placeholder="Nombre / Full Name" />
+              <Input type="text" name="subject" placeholder="Asunto / Subject" />
+              <Textarea name="message" placeholder="Mensaje / Message" />
               <SubmitButton type="submit">{submitButtonText}</SubmitButton>
             </Form>
           </TextContent>

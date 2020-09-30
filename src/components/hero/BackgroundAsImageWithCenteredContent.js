@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
 import MainBackground1 from "../../images/MainBackground3.png";
 
+
 //Router Link
 import { Link as RouterLink } from 'react-router-dom'
 
@@ -75,6 +76,15 @@ export default () => {
     </NavLinks>
   ];
 
+  function showMore() {
+    window.scrollBy({
+      top: 1000,
+      left: 1000,
+      behavior: "smooth"
+    })
+
+  }
+
   return (
     <Container>
       <OpacityOverlay />
@@ -86,7 +96,7 @@ export default () => {
               <br />
               Sagrado Corazón de Jesus
           </Heading>
-          <PrimaryAction>Learn More</PrimaryAction>
+          <PrimaryAction onClick={showMore}>Learn More</PrimaryAction>
         </Content>
       </HeroContainer>
     </Container>
