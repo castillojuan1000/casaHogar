@@ -29,7 +29,7 @@ const ContentWithPaddingXl = tw.div`max-w-screen-xl mx-auto pt-4 lg:py-12`;
 const HeadingContainer = tw.div``;
 const Subheading = tw(SubheadingBase)`text-center text-gray-100 mb-4`;
 const Heading = tw(SectionHeading)``;
-const Description = tw(SectionDescription)`mx-auto px-6 text-center text-gray-300`;
+// const Description = tw(SectionDescription)`mx-auto px-6 text-center text-gray-300`;
 
 const FaqsContainer = tw.div`mt-10 sm:mt-16 px-6 w-full flex-1 lg:flex justify-between items-start max-w-screen-lg mx-auto`;
 const FaqsColumn = tw.div`w-full lg:max-w-lg lg:mr-12 last:mr-0`;
@@ -46,36 +46,36 @@ const Answer = tw(motion.div)`hidden text-sm font-normal mt-4 text-gray-300`;
 export default ({
 
   subheading = "",
-  heading = "Frequently Asked Questions",
+  heading = "Preguntas Frecuentes",
   description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   faqs = [
     {
-      question: "Is lunch provided free of cost ?",
+      question: "El programa es solo para los addictos a las drogas ?",
       answer:
         "Yes, it is, if you have a membership with us. Otherwise it is charged as per the menu. Some limits do apply as to how much items can be included in your lunch. This limit is enough for any one person and merely exists to discourage abusal of the system."
     },
     {
-      question: "Do you have 2 Bedroom suites ?",
+      question: "Es el programa solo para hombres ?",
       answer:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
     },
     {
-      question: "Are Wi-Fi costs included in the price ?",
+      question: "Cual es la edad para poder ingresar ?",
       answer:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
     },
     {
-      question: "Where can I reach you for support ?",
+      question: "Quiero ayudar con el programa, que necesito hacer ?",
       answer:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
     },
     {
-      question: "What kind of SLA Guarantee do you provide ? ",
+      question: "Cual es el costo del programa ? ",
       answer:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
     },
     {
-      question: "Where are the servers located ?",
+      question: "Cual es la duracion del programa ?",
       answer:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     }
@@ -169,7 +169,7 @@ export default ({
         <HeadingContainer>
           {subheading && <Subheading>{subheading}</Subheading>}
           <Heading>{heading}</Heading>
-          <Description>{description}</Description>
+          {/* <Description>{description}</Description> */}
         </HeadingContainer>
         <FaqsContainer>
           <FaqsColumn>{faqCol1}</FaqsColumn>
