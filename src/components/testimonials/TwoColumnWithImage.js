@@ -104,7 +104,7 @@ export default () => {
     <Container>
       <Content>
         <HeadingInfoContainer>
-          <HeadingTitle>Quienes Somos</HeadingTitle>
+          <HeadingTitle style={{ color: '#6416FF' }}>Quienes Somos</HeadingTitle>
           <HeadingDescription></HeadingDescription>
         </HeadingInfoContainer>
         <TestimonialSliderContainer>

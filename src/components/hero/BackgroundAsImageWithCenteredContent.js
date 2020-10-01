@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import tw from "twin.macro";
 import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
@@ -76,10 +76,27 @@ export default () => {
     </NavLinks>
   ];
 
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  const handleWindowResize = () => {
+    setWindowWidth(window.innerWidth);
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", handleWindowResize);
+
+    return () => {
+      window.removeEventListener("resize", handleWindowResize);
+    };
+  });
+
+
   function showMore() {
+    let x = windowWidth >= 650 ? 1000 : 800;
+
     window.scrollBy({
-      top: 1000,
-      left: 1000,
+      top: x,
+      left: 0,
       behavior: "smooth"
     })
 
