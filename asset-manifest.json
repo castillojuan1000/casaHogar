@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/casaHogar/static/css/main.d9188528.chunk.css",
-    "main.js": "/casaHogar/static/js/main.d8ce1f86.chunk.js",
-    "main.js.map": "/casaHogar/static/js/main.d8ce1f86.chunk.js.map",
+    "main.js": "/casaHogar/static/js/main.d315ff93.chunk.js",
+    "main.js.map": "/casaHogar/static/js/main.d315ff93.chunk.js.map",
     "runtime-main.js": "/casaHogar/static/js/runtime-main.c28e2440.js",
     "runtime-main.js.map": "/casaHogar/static/js/runtime-main.c28e2440.js.map",
     "static/css/2.6011fe8e.chunk.css": "/casaHogar/static/css/2.6011fe8e.chunk.css",
-    "static/js/2.87073945.chunk.js": "/casaHogar/static/js/2.87073945.chunk.js",
-    "static/js/2.87073945.chunk.js.map": "/casaHogar/static/js/2.87073945.chunk.js.map",
+    "static/js/2.db3852b9.chunk.js": "/casaHogar/static/js/2.db3852b9.chunk.js",
+    "static/js/2.db3852b9.chunk.js.map": "/casaHogar/static/js/2.db3852b9.chunk.js.map",
     "index.html": "/casaHogar/index.html",
-    "precache-manifest.11134c10502c94ef8b68f08075b15a6a.js": "/casaHogar/precache-manifest.11134c10502c94ef8b68f08075b15a6a.js",
+    "precache-manifest.6e1dfff9490e95dd5eb5e0e4f652738e.js": "/casaHogar/precache-manifest.6e1dfff9490e95dd5eb5e0e4f652738e.js",
     "service-worker.js": "/casaHogar/service-worker.js",
     "static/css/2.6011fe8e.chunk.css.map": "/casaHogar/static/css/2.6011fe8e.chunk.css.map",
     "static/css/main.d9188528.chunk.css.map": "/casaHogar/static/css/main.d9188528.chunk.css.map",
-    "static/js/2.87073945.chunk.js.LICENSE.txt": "/casaHogar/static/js/2.87073945.chunk.js.LICENSE.txt",
+    "static/js/2.db3852b9.chunk.js.LICENSE.txt": "/casaHogar/static/js/2.db3852b9.chunk.js.LICENSE.txt",
     "static/media/MainBackground3.png": "/casaHogar/static/media/MainBackground3.f2bbc8e3.png",
     "static/media/apostolado.png": "/casaHogar/static/media/apostolado.dac043e4.png",
     "static/media/arrow-left-2-icon.319a321f.svg": "/casaHogar/static/media/arrow-left-2-icon.319a321f.svg",
@@ -39,8 +39,8 @@
   "entrypoints": [
     "static/js/runtime-main.c28e2440.js",
     "static/css/2.6011fe8e.chunk.css",
-    "static/js/2.87073945.chunk.js",
+    "static/js/2.db3852b9.chunk.js",
     "static/css/main.d9188528.chunk.css",
-    "static/js/main.d8ce1f86.chunk.js"
+    "static/js/main.d315ff93.chunk.js"
   ]
 }
