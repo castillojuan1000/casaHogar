@@ -1,8 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import tw from "twin.macro";
 import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
 import MainBackground1 from "../../images/MainBackground3.png";
+import smoothscroll from 'smoothscroll-polyfill';
+
+
 
 
 //Router Link
@@ -40,6 +43,9 @@ const Heading = styled.h1`
 
 const PrimaryAction = tw.button`rounded-full px-8 py-3 mt-10 text-sm sm:text-base sm:mt-16 sm:px-8 sm:py-4 bg-gray-100 font-bold shadow transition duration-300 bg-primary-500 text-gray-100 hocus:bg-primary-700 hocus:text-gray-200 focus:outline-none focus:shadow-outline`;
 
+window.__forceSmoothScrollPolyfill__ = true;
+smoothscroll.polyfill();
+
 export default () => {
   const navLinks = [
     <NavLinks key={1}>
@@ -76,20 +82,6 @@ export default () => {
     </NavLinks>
   ];
 
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-
-  const handleWindowResize = () => {
-    setWindowWidth(window.innerWidth);
-  };
-
-  useEffect(() => {
-    window.addEventListener("resize", handleWindowResize);
-
-    return () => {
-      window.removeEventListener("resize", handleWindowResize);
-    };
-  });
-
 
   function showMore() {
     // let x = windowWidth >= 650 ? 1000 : 800;
@@ -99,7 +91,7 @@ export default () => {
       left: 0,
       behavior: "smooth"
     })
-    console.log(window.innerHeight)
+
   }
 
   return (
@@ -113,7 +105,7 @@ export default () => {
               <br />
               Sagrado Corazón de Jesus
           </Heading>
-          <PrimaryAction onClick={showMore}>Learn More</PrimaryAction>
+          <PrimaryAction onClick={showMore}>Aprende Mas</PrimaryAction>
         </Content>
       </HeroContainer>
     </Container>
