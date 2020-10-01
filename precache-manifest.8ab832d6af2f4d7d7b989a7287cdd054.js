@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f071360780266afda259a2a7de26747c",
+    "revision": "f9a2072348bb6c94f6e8f4d72b4b6d05",
     "url": "/casaHogar/index.html"
   },
   {
-    "revision": "1cf3bbe0835ad3b63eda",
+    "revision": "83803b01d20f7069b7a2",
     "url": "/casaHogar/static/css/2.6011fe8e.chunk.css"
   },
   {
-    "revision": "536886ee65a3a2358c90",
+    "revision": "b60cd4fa287b37f02538",
     "url": "/casaHogar/static/css/main.d9188528.chunk.css"
   },
   {
-    "revision": "1cf3bbe0835ad3b63eda",
-    "url": "/casaHogar/static/js/2.db3852b9.chunk.js"
+    "revision": "83803b01d20f7069b7a2",
+    "url": "/casaHogar/static/js/2.10abd685.chunk.js"
   },
   {
     "revision": "2069192f75c6f3fb6247231eea52f248",
-    "url": "/casaHogar/static/js/2.db3852b9.chunk.js.LICENSE.txt"
+    "url": "/casaHogar/static/js/2.10abd685.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "536886ee65a3a2358c90",
-    "url": "/casaHogar/static/js/main.edb6b4d0.chunk.js"
+    "revision": "b60cd4fa287b37f02538",
+    "url": "/casaHogar/static/js/main.db4ad123.chunk.js"
   },
   {
     "revision": "b86dafd80fbc97655bbe",
