@@ -92,14 +92,14 @@ export default () => {
 
 
   function showMore() {
-    let x = windowWidth >= 650 ? 1000 : 800;
+    // let x = windowWidth >= 650 ? 1000 : 800;
 
     window.scrollBy({
-      top: x,
+      top: window.innerHeight,
       left: 0,
       behavior: "smooth"
     })
-
+    console.log(window.innerHeight)
   }
 
   return (
