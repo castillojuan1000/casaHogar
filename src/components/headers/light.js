@@ -83,7 +83,7 @@ export default ({ roundedHeaderButton = false, logoLink, links, className, colla
       <NavLink >Blog</NavLink>
       <NavLink >Pricing</NavLink>
       <NavLink >Contact Us</NavLink>
-      <NavLink href="/#" tw="lg:ml-12!">
+      <NavLink href="/" tw="lg:ml-12!">
         Login
       </NavLink>
       <PrimaryLink css={roundedHeaderButton && tw`rounded-full`} href="/#">Sign Up</PrimaryLink>

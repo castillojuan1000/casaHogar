@@ -82,6 +82,12 @@ export default () => {
         </RouterLink>
       </NavLink>
 
+      <NavLink >
+        <RouterLink to='/donate'>
+          Donaciones
+        </RouterLink>
+      </NavLink>
+
       <NavLink>
         <RouterLink to='/contact'>
           Contactanos

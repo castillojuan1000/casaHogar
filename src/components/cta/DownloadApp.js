@@ -9,7 +9,24 @@ import { SectionHeading, Subheading as SubheadingBase } from "components/misc/He
 import appleIconImageSrc from "images/apple-icon.png";
 import googlePlayIconImageSrc from "images/google-play-icon.png"
 
-const Container = tw(ContainerBase)`bg-gray-900 -mx-8`
+//navbar
+import Header, { NavLink, NavLinks, LogoLink, NavToggle, DesktopNavLinks } from "../headers/light.js";
+import { Link as RouterLink } from 'react-router-dom'
+
+const StyledHeader = styled(Header)`
+  ${tw`pb-4 lg:pb-12 px-8 lg:px-4 xl:px-4 max-w-none w-full`}
+  ${DesktopNavLinks} ${NavLink}, ${LogoLink} {
+    ${tw`text-gray-100 hover:border-primary-100 hover:text-primary-100`}
+  }
+  ${NavToggle}.closed {
+    ${tw`text-gray-100 hover:text-gray-400`}
+  }
+`;
+
+
+
+
+const Container = tw(ContainerBase)`bg-gray-900 -mx-8 h-auto  lg:h-screen xl:h-screen`
 const Content = tw(ContentWithPaddingXl)``
 const Row = tw.div`px-8 flex items-center relative z-10 flex-col lg:flex-row text-center lg:text-left justify-center`;
 
@@ -19,15 +36,15 @@ const Text = tw(SectionHeading)`text-gray-100 lg:text-left max-w-none text-3xl l
 const Subheading = tw(SubheadingBase)`text-yellow-500 mb-4 tracking-wider`
 
 const LinksContainer = tw.div`mt-8 lg:mt-16 flex flex-col items-center sm:block`
-const Link = styled.a`
-  ${tw`w-56 p-3 sm:p-4 text-sm sm:text-base font-bold uppercase tracking-wider rounded-full inline-flex justify-center items-center mt-6 first:mt-0 sm:mt-0 sm:ml-8 first:ml-0 bg-gray-100 hocus:bg-gray-300 text-gray-900 hocus:text-gray-900 shadow hover:shadow-lg focus:shadow-outline focus:outline-none transition duration-300`}
-  img {
-    ${tw`inline-block h-8 mr-3`}
-  }
-  span {
-    ${tw`leading-none inline-block`}
-  }
-`;
+// const Link = styled.a`
+//   ${tw`w-56 p-3 sm:p-4 text-sm sm:text-base font-bold uppercase tracking-wider rounded-full inline-flex justify-center items-center mt-6 first:mt-0 sm:mt-0 sm:ml-8 first:ml-0 bg-gray-100 hocus:bg-gray-300 text-gray-900 hocus:text-gray-900 shadow hover:shadow-lg focus:shadow-outline focus:outline-none transition duration-300`}
+//   img {
+//     ${tw`inline-block h-8 mr-3`}
+//   }
+//   span {
+//     ${tw`leading-none inline-block`}
+//   }
+// `;
 
 const ImageContainer = tw(ColumnContainer)`mt-16 lg:mt-0 lg:ml-16 flex justify-end`;
 
@@ -46,31 +63,74 @@ export default ({
   pushDownFooter = false,
   imageSrc = mockupImageSrc,
 }) => {
+
+  const navLinks = [
+    <NavLinks key={1}>
+
+      <NavLink >
+        <RouterLink to='/'>
+          Home
+        </RouterLink>
+      </NavLink>
+
+      <NavLink>
+        <RouterLink to='pilares'>
+          Pilares
+        </RouterLink>
+      </NavLink>
+
+      <NavLink >
+        <RouterLink to='/faqs'>
+          Preguntas
+        </RouterLink>
+      </NavLink>
+
+      <NavLink >
+        <RouterLink to='/donate'>
+          Donaciones
+        </RouterLink>
+      </NavLink>
+
+      <NavLink>
+        <RouterLink to='/contact'>
+          Contactanos
+        </RouterLink>
+      </NavLink>
+
+    </NavLinks>,
+    <NavLinks key={2}>
+      {/* <PrimaryLink href="/#">
+        Hire Us
+      </PrimaryLink> */}
+    </NavLinks>
+  ];
+
   return (
     <Container css={pushDownFooter && tw`mb-20 lg:mb-24`}>
+      <StyledHeader links={navLinks} />
       <Content>
         <Row>
           <TextContainer>
             {subheading && <Subheading>{subheading}</Subheading>}
             <Text>{text}</Text>
             <LinksContainer>
-              <Link href={link1Url}>
-                <img src={link1IconSrc} alt=""/>
+              {/* <Link href={link1Url}>
+                <img src={link1IconSrc} alt="" />
                 <span>{link1Text}</span>
               </Link>
               <Link href={link2Url}>
-                <img src={link2IconSrc} alt=""/>
+                <img src={link2IconSrc} alt="" />
                 <span>{link2Text}</span>
-              </Link>
+              </Link> */}
             </LinksContainer>
           </TextContainer>
           <ImageContainer>
-            <img src={imageSrc} alt="" tw="w-64"/>
+            <img src={imageSrc} alt="" tw="w-64" />
           </ImageContainer>
         </Row>
         <DecoratorBlobContainer>
-          <DecoratorBlob1/>
-          <DecoratorBlob2/>
+          <DecoratorBlob1 />
+          <DecoratorBlob2 />
         </DecoratorBlobContainer>
       </Content>
     </Container>

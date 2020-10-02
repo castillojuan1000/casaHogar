@@ -4,7 +4,7 @@ import tw from "twin.macro";
 import styled, { css } from "styled-components/macro"; //eslint-disable-line
 import { Container } from "components/misc/Layouts.js";
 import { SectionHeading, Subheading as SubheadingBase } from "components/misc/Headings.js";
-import { SectionDescription } from "components/misc/Typography.js";
+// import { SectionDescription } from "components/misc/Typography.js";
 import { ReactComponent as ChevronDownIcon } from "feather-icons/dist/icons/chevron-down.svg";
 
 //navbar
@@ -145,6 +145,12 @@ export default ({
       <NavLink >
         <RouterLink to='/faqs'>
           Preguntas
+        </RouterLink>
+      </NavLink>
+
+      <NavLink >
+        <RouterLink to='/donate'>
+          Donaciones
         </RouterLink>
       </NavLink>
 
