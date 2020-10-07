@@ -75,7 +75,7 @@ export default ({
   imageShadow = false,
   subheading = "Testimonials",
   heading = "Para Quien Es ",
-  description = "Para todos los que necesiten acompañamiento espiritual, sanacion de addicciones, o simplemente para la persona que necesite un tiempo de oracion y crecimiento espiritual",
+  description = "Para todos los que necesiten acompañamiento espiritual, sanacion y liberacion de las addicciones, o simplemente para la persona que necesite un tiempo de oracion y discernimiento vocacional.",
   textOnLeft = false,
   testimonials = [
     {
@@ -94,7 +94,7 @@ export default ({
         "https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=512&h=512&q=80",
       heading: "Acompañamiento Espiritual",
       quote:
-        "Sinor Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+        "Escuchar y darle consejo a la persona para que despues ella en oracion tome sus propias decisiones segun la voluntad de Dios.",
       customerName: "Adam Cuppy",
       customerTitle: "Founder, EventsNYC"
     },
@@ -102,9 +102,9 @@ export default ({
       stars: 5,
       profileImageSrc:
         "https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=512&h=512&q=80",
-      heading: "Oracion Y Crecimiento Espiritual",
+      heading: "Oracion Y Discernimiento Vocacional",
       quote:
-        "Sinor Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+        "Hacer un tiempo de experiencia espiritual y de servicio para descubrir el proposito de su vida y su vocacion para la cual Dios los envio a este mundo.",
       customerName: "Adam Cuppy",
       customerTitle: "Founder, EventsNYC"
     }

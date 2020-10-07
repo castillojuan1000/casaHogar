@@ -10,7 +10,9 @@ import { ReactComponent as ArrowLeftIcon } from "../../images/arrow-left-2-icon.
 import { ReactComponent as ArrowRightIcon } from "../../images/arrow-right-2-icon.svg";
 import { ReactComponent as SvgDecoratorBlob1 } from "../../images/svg-decorator-blob-4.svg";
 import { ReactComponent as SvgDecoratorBlob2 } from "../../images/svg-decorator-blob-5.svg";
-
+import MadreVicky from "../../images/madreVicky.png";
+import QueEsCasaHogar from '../../images/casahogar/queEsCasaHogar.jpg'
+import QueHacemos from '../../images/casahogar/queHacemos.jpeg'
 import "slick-carousel/slick/slick.css";
 
 const Container = tw.div`relative`;
@@ -76,27 +78,24 @@ export default () => {
    */
   const testimonials = [
     {
-      imageSrc:
-        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3.25&w=512&h=512&q=80",
+      imageSrc: MadreVicky,
       quote:
-        "Esto seria el testimonio de la madre de como este proyecto surgio y como empezo y que la llamo a llevar a este proyecto",
-      customerName: "Madre Vicky",
+        "Desde los inicios de mi proceso de formacion a la vida consagrada hubo una inquietud que buscaba constantemente en la oracion, saber cual era la voluntad de Dios. Despues de muchos años, el Senor me manifesto su voluntad al escuchar, ver y sentir el dolor de como los jovenes son atrapados y destruidos por las addiciones.",
+      customerName: "MADRE VICKY",
       customerTitle: "Fundadora, Casa Hogar"
     },
     {
-      imageSrc:
-        "https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=512&h=512&q=80",
+      imageSrc: QueEsCasaHogar,
       quote:
-        "Es un lugar donde la persona viene a encontrarse con Dios o sanarse de las addicciones. Ofresemos ayuda a las personas con adiccion, personas que quieren tener un encuentro con Dios, y ayuda espiritual a la familia",
-      customerName: "Que es Casa Hogar?",
-      customerTitle: "Fundada en 2018"
+        "Es un lugar de encuentro con el amor misericordioso de Dios. Para sanarse del pecado y de las addiciones; a traves del silencio, paz, reflexion, y la oracion.",
+      customerName: "QUE ES CASA HOGAR",
+      customerTitle: "Fundada el 28 Jinio del 2019"
     },
     {
-      imageSrc:
-        "https://images.unsplash.com/photo-1580852300654-03c803a14e24?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4.25&w=512&h=512&q=80",
+      imageSrc: QueHacemos,
       quote:
-        "Ofresemos ayuda y acompañamiento espiritual a las personas con cualquier tipo de addicion. De igual manera, se ofrece la sanacion atravez de un encuentro personal con el Amor Misericordioso de Dios, por medio de una formacion de 7 pilares que ayuda a la persona a sanar el espiritu, fisico y mente.",
-      customerName: "Que hacemos?",
+        "Ofresemos ayuda espiritual a las personas que tienen problemas personales en su matrimonio, con los hijos y a la familia en general; tambien pueden venir jovenes hacer una experiencia misionera para descubrir su vocasion. Y acompañamiento a los jovenes para la sanacion y liberacion con el problema de las addiciones.",
+      customerName: "QUE HACEMOS",
       // customerTitle: "Event Manager, Brite"
     }
   ];
@@ -104,7 +103,7 @@ export default () => {
     <Container>
       <Content>
         <HeadingInfoContainer>
-          <HeadingTitle style={{ color: '#6416FF' }}>Quienes Somos</HeadingTitle>
+          <HeadingTitle style={{ color: '#6416FF' }}>QUINES SOMOS</HeadingTitle>
           <HeadingDescription></HeadingDescription>
         </HeadingInfoContainer>
         <TestimonialSliderContainer>

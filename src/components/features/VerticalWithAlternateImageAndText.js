@@ -4,11 +4,15 @@ import tw from "twin.macro";
 import { css } from "styled-components/macro"; //eslint-disable-line
 import { ReactComponent as SvgDotPatternIcon } from "../../images/dot-pattern.svg";
 import { SectionHeading as HeadingTitle } from "../misc/Headings.js";
+import { SectionHeading } from "../misc/Headings.js";
+
 
 //fotos
 import Oracion from "../../images/oracion.png";
 import Apostolado from "../../images/apostolado.png";
 import Trabajo from '../../images/casahogar/trabajo.png'
+import Estudio from '../../images/casahogar/estudio.jpg'
+import VidaComunitaria from '../../images/casahogar/vidaComunitaria.jpeg'
 
 //navbar
 import Header, { NavLink, NavLinks, LogoLink, NavToggle, DesktopNavLinks } from "../headers/light.js";
@@ -24,6 +28,9 @@ const StyledHeader = styled(Header)`
   }
 `;
 
+const Heading = tw(
+  SectionHeading
+)`mb-4 font-black text-left text-lg sm:text-lg lg:text-lg text-left md:text-left leading-tight text-primary-500`;
 
 const Container = tw.div`relative`;
 
@@ -105,62 +112,48 @@ export default () => {
   const cards = [
     {
       imageSrc: Oracion,
-      title: "Oracion",
+      title: "ORACION",
+      heading: "+ Oracion - Adiccion",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "Siendo este el primer pilar, es el más importante ya que de la oración los mantiene fuertes en los demás pilares, la oración los sostiene, les fortalece y les ayuda a vencer la ansiedad y perseverar en su programa.",
 
     },
 
     {
-      imageSrc:
-        "https://images.unsplash.com/photo-1543423924-b9f161af87e4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
+      imageSrc: Estudio,
 
-      title: "Lectura Biblica",
+      title: "ESTUDIO",
+      heading: "+ Integridad - Ignorancia",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "Poniendo en efecto la parte de la educación de una persona completa, el pilar del estudio ayuda a formar la mente, el espíritu y toda la persona de una manera integra.Tiene uno que motivar mucho a los jóvenes a que le encuentren el sentido al estudio ya que por la vida que han llevado durante mucho tiempo, a muchos jóvenes no les gusta el estudio…uno sabe que es necesario para la recuperación de su autoestima y en muchos otros aspectos de su persona.",
 
     },
 
     {
       imageSrc: Trabajo,
 
-      title: "Trabajo",
+      title: "TRABAJO",
+      heading: "+ Talento - Pereza",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        'El trabajo y la actividad manual ayuda a forjar el carácter del chico que se esta recuperando de la adicción, también le ayuda a fortalecer su voluntad, purifica su Espíritu para hacerlo responsable y cumplido en todo lo que su recuperación le exige además que lo prepara a tener sentido de responsabilidad en el presente y por el resto de su vida.',
 
     },
     {
-      imageSrc:
-        "https://images.unsplash.com/photo-1509824227185-9c5a01ceba0d?ixlib=rb-1.2.1&auto=format&fit=crop&w=658&q=80",
+      imageSrc: VidaComunitaria,
 
-      title: "Formacion Integral",
+      title: "VIDA COMUNITARIA",
+      heading: "+ Amor - Egoismo",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-
-    },
-    {
-      imageSrc: Apostolado,
-
-      title: "Deporte",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-
-    },
-    {
-      imageSrc:
-        "https://images.unsplash.com/photo-1509824227185-9c5a01ceba0d?ixlib=rb-1.2.1&auto=format&fit=crop&w=658&q=80",
-
-      title: "Vida Comunitaria",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "Vida en comunidad ciertamente es un pilar de gran importancia en el joven que se esta rehabilitando, pues recobran la importancia de vivir en familia que por ahora es compartir con los demás jóvenes que tienen el mismo problema con un mismo ideal el de querer salir de las adicciones.",
 
     },
     {
       imageSrc: Apostolado,
 
-      title: "Servicio Misionero",
+      title: "SERVICIO MISIONERO",
+      heading: "+ Humildad - Tristeza",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "Por apostolado se entiende una actividad concreta de servicio ayudando al prójimo, ya sea individual o en familia, cuyo fin es servir a los hermanos mediante las obras de misericordia y dar a conocer la Palabra de Dios.",
 
     }
   ];
@@ -171,7 +164,7 @@ export default () => {
       <SingleColumn>
         <StyledHeader links={navLinks} />
         <HeadingInfoContainer>
-          <HeadingTitle>Pilares Del Programa</HeadingTitle>
+          <HeadingTitle>PILARES DEL PROGRAMA</HeadingTitle>
           <HeadingDescription>
             Los pilares son una parte esensial en el crecimiento y desarollo de la persona dentro del programa. El programa esta compuesto de 7 pilares con intension de fortalezer el espiritu, cuerpo y mente de la persona.
           </HeadingDescription>
@@ -184,6 +177,7 @@ export default () => {
               <Details>
 
                 <Title>{card.title}</Title>
+                <Heading>{card.heading}</Heading>
                 <Description>{card.description}</Description>
 
               </Details>
