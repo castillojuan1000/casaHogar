@@ -1,31 +1,35 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0c6bac6e8ebf6c04a930d7179f25592f",
+    "revision": "aba1d7c99148b07d74ced745a0123071",
     "url": "/casaHogar/index.html"
   },
   {
-    "revision": "6b638922881a8648c983",
+    "revision": "f40d971514cfd376ecaf",
     "url": "/casaHogar/static/css/2.6011fe8e.chunk.css"
   },
   {
-    "revision": "fcd041b9ab56c1ea7642",
+    "revision": "90b5bf269cdd356eefd0",
     "url": "/casaHogar/static/css/main.d9188528.chunk.css"
   },
   {
-    "revision": "6b638922881a8648c983",
-    "url": "/casaHogar/static/js/2.85b32489.chunk.js"
+    "revision": "f40d971514cfd376ecaf",
+    "url": "/casaHogar/static/js/2.29c38033.chunk.js"
   },
   {
     "revision": "2069192f75c6f3fb6247231eea52f248",
-    "url": "/casaHogar/static/js/2.85b32489.chunk.js.LICENSE.txt"
+    "url": "/casaHogar/static/js/2.29c38033.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "fcd041b9ab56c1ea7642",
-    "url": "/casaHogar/static/js/main.5c0071f1.chunk.js"
+    "revision": "90b5bf269cdd356eefd0",
+    "url": "/casaHogar/static/js/main.8cb1cb34.chunk.js"
   },
   {
     "revision": "b86dafd80fbc97655bbe",
     "url": "/casaHogar/static/js/runtime-main.c28e2440.js"
+  },
+  {
+    "revision": "4dbcdbef640b99acf640f6c65fa57596",
+    "url": "/casaHogar/static/media/Donar1.4dbcdbef.jpg"
   },
   {
     "revision": "f2bbc8e34e110c7f8f48bf3c852b1b02",
@@ -34,10 +38,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "dac043e496caea579de03dce251f9c8b",
     "url": "/casaHogar/static/media/apostolado.dac043e4.png"
-  },
-  {
-    "revision": "92f0fc5998d20d7219db2625993aa34f",
-    "url": "/casaHogar/static/media/app-mockup.92f0fc59.png"
   },
   {
     "revision": "319a321f4d259ea75f3a12ca091692c0",
@@ -112,16 +112,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/casaHogar/static/media/star-icon.5d0ff9bc.svg"
   },
   {
+    "revision": "ec52da39f670db5b4b3c32f54914a919",
+    "url": "/casaHogar/static/media/svg-decorator-blob-1.ec52da39.svg"
+  },
+  {
     "revision": "06b7e9297b931c8f3c729d9666faf31f",
     "url": "/casaHogar/static/media/svg-decorator-blob-4.06b7e929.svg"
   },
   {
     "revision": "50a3868db49539d53742411308690eba",
     "url": "/casaHogar/static/media/svg-decorator-blob-5.50a3868d.svg"
-  },
-  {
-    "revision": "06b7e9297b931c8f3c729d9666faf31f",
-    "url": "/casaHogar/static/media/svg-decorator-blob-9.06b7e929.svg"
   },
   {
     "revision": "7e80b9954c2ce5b1b47e99748d6482ed",

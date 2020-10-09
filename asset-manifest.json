@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/casaHogar/static/css/main.d9188528.chunk.css",
-    "main.js": "/casaHogar/static/js/main.5c0071f1.chunk.js",
-    "main.js.map": "/casaHogar/static/js/main.5c0071f1.chunk.js.map",
+    "main.js": "/casaHogar/static/js/main.8cb1cb34.chunk.js",
+    "main.js.map": "/casaHogar/static/js/main.8cb1cb34.chunk.js.map",
     "runtime-main.js": "/casaHogar/static/js/runtime-main.c28e2440.js",
     "runtime-main.js.map": "/casaHogar/static/js/runtime-main.c28e2440.js.map",
     "static/css/2.6011fe8e.chunk.css": "/casaHogar/static/css/2.6011fe8e.chunk.css",
-    "static/js/2.85b32489.chunk.js": "/casaHogar/static/js/2.85b32489.chunk.js",
-    "static/js/2.85b32489.chunk.js.map": "/casaHogar/static/js/2.85b32489.chunk.js.map",
+    "static/js/2.29c38033.chunk.js": "/casaHogar/static/js/2.29c38033.chunk.js",
+    "static/js/2.29c38033.chunk.js.map": "/casaHogar/static/js/2.29c38033.chunk.js.map",
     "index.html": "/casaHogar/index.html",
-    "precache-manifest.9e7e9ef9e712894c64a67c463f775fdc.js": "/casaHogar/precache-manifest.9e7e9ef9e712894c64a67c463f775fdc.js",
+    "precache-manifest.8a66aeba090ff94097f6a09f46746600.js": "/casaHogar/precache-manifest.8a66aeba090ff94097f6a09f46746600.js",
     "service-worker.js": "/casaHogar/service-worker.js",
     "static/css/2.6011fe8e.chunk.css.map": "/casaHogar/static/css/2.6011fe8e.chunk.css.map",
     "static/css/main.d9188528.chunk.css.map": "/casaHogar/static/css/main.d9188528.chunk.css.map",
-    "static/js/2.85b32489.chunk.js.LICENSE.txt": "/casaHogar/static/js/2.85b32489.chunk.js.LICENSE.txt",
+    "static/js/2.29c38033.chunk.js.LICENSE.txt": "/casaHogar/static/js/2.29c38033.chunk.js.LICENSE.txt",
+    "static/media/Donar1.jpg": "/casaHogar/static/media/Donar1.4dbcdbef.jpg",
     "static/media/MainBackground3.png": "/casaHogar/static/media/MainBackground3.f2bbc8e3.png",
     "static/media/apostolado.png": "/casaHogar/static/media/apostolado.dac043e4.png",
-    "static/media/app-mockup.png": "/casaHogar/static/media/app-mockup.92f0fc59.png",
     "static/media/arrow-left-2-icon.319a321f.svg": "/casaHogar/static/media/arrow-left-2-icon.319a321f.svg",
     "static/media/arrow-left-3-icon.41406a77.svg": "/casaHogar/static/media/arrow-left-3-icon.41406a77.svg",
     "static/media/arrow-right-2-icon.42c238c4.svg": "/casaHogar/static/media/arrow-right-2-icon.42c238c4.svg",
@@ -35,9 +35,9 @@
     "static/media/queEsCasaHogar.jpg": "/casaHogar/static/media/queEsCasaHogar.38869ad2.jpg",
     "static/media/queHacemos.jpeg": "/casaHogar/static/media/queHacemos.97ab1f83.jpeg",
     "static/media/star-icon.5d0ff9bc.svg": "/casaHogar/static/media/star-icon.5d0ff9bc.svg",
+    "static/media/svg-decorator-blob-1.ec52da39.svg": "/casaHogar/static/media/svg-decorator-blob-1.ec52da39.svg",
     "static/media/svg-decorator-blob-4.06b7e929.svg": "/casaHogar/static/media/svg-decorator-blob-4.06b7e929.svg",
     "static/media/svg-decorator-blob-5.50a3868d.svg": "/casaHogar/static/media/svg-decorator-blob-5.50a3868d.svg",
-    "static/media/svg-decorator-blob-9.06b7e929.svg": "/casaHogar/static/media/svg-decorator-blob-9.06b7e929.svg",
     "static/media/trabajo.png": "/casaHogar/static/media/trabajo.7e80b995.png",
     "static/media/vidaComunitaria.jpeg": "/casaHogar/static/media/vidaComunitaria.ea590321.jpeg",
     "static/media/x.svg": "/casaHogar/static/media/x.b0200bf7.svg",
@@ -46,8 +46,8 @@
   "entrypoints": [
     "static/js/runtime-main.c28e2440.js",
     "static/css/2.6011fe8e.chunk.css",
-    "static/js/2.85b32489.chunk.js",
+    "static/js/2.29c38033.chunk.js",
     "static/css/main.d9188528.chunk.css",
-    "static/js/main.5c0071f1.chunk.js"
+    "static/js/main.8cb1cb34.chunk.js"
   ]
 }
