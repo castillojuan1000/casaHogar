@@ -112,10 +112,9 @@ export default ({
 
   const [amount, setAmount] = useState(1)
 
-  async function handleToken(token, addresses){
-    const response = 
+  const handleToken = () => {
+    alert('hi')
   }
-
 
   return (
     <>
