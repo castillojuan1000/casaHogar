@@ -4,7 +4,13 @@ import tw from "twin.macro";
 //eslint-disable-next-line
 import { css } from "styled-components/macro";
 
-// import Header from "../headers/light.js";
+
+//stripe dependencies
+// import axios from 'react-axios'
+import StripeCheckout from "react-stripe-checkout";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 
 
 import { ReactComponent as SvgDecoratorBlob1 } from "../../images/svg-decorator-blob-1.svg";
@@ -26,7 +32,8 @@ const StyledHeader = styled(Header)`
     ${tw`text-gray-900 hover:text-primary-500`}
   }
 `;
-
+//initialize toast 
+toast.configure();
 
 const Container = tw.div`relative bg-cover h-screen min-h-144`;
 const TwoColumn = tw.div`flex flex-col lg:flex-row md:items-center max-w-screen-xl mx-auto mt--10 lg:mt-32 py-20 md:py-24`;
@@ -39,7 +46,7 @@ const Heading = tw.h1`font-black text-3xl md:text-5xl leading-snug max-w-3xl`;
 const Paragraph = tw.p`my-5 lg:my-8 text-sm lg:text-base font-medium text-gray-600 max-w-lg mx-auto lg:mx-0`;
 
 const Actions = tw.div`flex flex-col items-center sm:flex-row justify-center lg:justify-start  mt-8`;
-const PayStripeButton = tw.button`font-bold px-8 lg:px-10 py-3 my-5 lg:mr-10 rounded bg-primary-500 text-gray-100 hocus:bg-primary-700 focus:shadow-outline focus:outline-none transition duration-300`;
+// const PayStripeButton = tw.button`font-bold px-8 lg:px-10 py-3 my-5 lg:mr-10 rounded bg-primary-500 text-gray-100 hocus:bg-primary-700 focus:shadow-outline focus:outline-none transition duration-300`;
 const PayPalButton = tw.button`font-bold px-8 lg:px-10 py-3 rounded bg-blue-500 text-gray-100 hocus:bg-primary-700 focus:shadow-outline focus:outline-none transition duration-300`;
 
 const IllustrationContainer = tw.div`flex justify-center md:justify-end items-center relative max-w-3xl lg:max-w-none`;
@@ -103,6 +110,13 @@ export default ({
     </NavLinks>
   ];
 
+  const [amount, setAmount] = useState(1)
+
+  async function handleToken(token, addresses){
+    const response = 
+  }
+
+
   return (
     <>
       <StyledHeader links={navLinks} />
@@ -114,8 +128,12 @@ export default ({
             <Paragraph>{description}</Paragraph>
             <DecoratorBlob1 />
             <Actions>
-              <PayStripeButton as="a">{PaywithStripeText}</PayStripeButton>
-              <PayPalButton as="a">{PayPalButtonText}</PayPalButton>
+              <StripeCheckout stripeKey="pk_test_51HZwqOIOzjuhc7bJRv25KUOeld7n95J0gfUV8x0hEuQ9MPzVGkBr0ISMvON3nkW27SXXw5LIoF0MNLCNt9jRXRBb00GVbarqvU"
+                amount={amount * 100}
+                token={handleToken}
+                name='Donacion Casa Hogar SCJ'
+              />
+              <PayPalButton >{PayPalButtonText}</PayPalButton>
 
             </Actions>
           </LeftColumn>
