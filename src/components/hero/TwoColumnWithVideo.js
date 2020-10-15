@@ -3,7 +3,7 @@ import styled from "styled-components";
 import tw from "twin.macro";
 //eslint-disable-next-line
 import { css } from "styled-components/macro";
-
+import axios from 'axios'
 
 //stripe dependencies
 // import axios from 'react-axios'
@@ -14,7 +14,6 @@ import "react-toastify/dist/ReactToastify.css";
 
 
 import { ReactComponent as SvgDecoratorBlob1 } from "../../images/svg-decorator-blob-1.svg";
-
 import DonarImage1 from "../../images/casahogar/Donar1.jpg";
 
 
@@ -35,7 +34,7 @@ const StyledHeader = styled(Header)`
 //initialize toast 
 toast.configure();
 
-const Container = tw.div`relative bg-cover h-screen min-h-144`;
+const Container = tw.div`relative lg:bg-cover lg:h-screen lg:min-h-144`;
 const TwoColumn = tw.div`flex flex-col lg:flex-row md:items-center max-w-screen-xl mx-auto mt--10 lg:mt-32 py-20 md:py-24`;
 
 
@@ -45,9 +44,16 @@ const RightColumn = tw.div`relative mt-12 lg:mt-0 flex flex-col justify-center`;
 const Heading = tw.h1`font-black text-3xl md:text-5xl leading-snug max-w-3xl`;
 const Paragraph = tw.p`my-5 lg:my-8 text-sm lg:text-base font-medium text-gray-600 max-w-lg mx-auto lg:mx-0`;
 
-const Actions = tw.div`flex flex-col items-center sm:flex-row justify-center lg:justify-start  mt-8`;
-// const PayStripeButton = tw.button`font-bold px-8 lg:px-10 py-3 my-5 lg:mr-10 rounded bg-primary-500 text-gray-100 hocus:bg-primary-700 focus:shadow-outline focus:outline-none transition duration-300`;
-const PayPalButton = tw.button`font-bold px-8 lg:px-10 py-3 rounded bg-blue-500 text-gray-100 hocus:bg-primary-700 focus:shadow-outline focus:outline-none transition duration-300`;
+//Amount Buttons
+const SelectAmount = tw.div`flex flex-row justify-around content-center`
+const AmountButton1 = tw.button`font-bold px-4 lg:px-10 py-2 lg:py-3 rounded bg-orange-400 text-gray-100 hocus:bg-orange-700 focus:shadow-outline focus:outline-none transition duration-300`;
+const AmountButton2 = tw.button`font-bold px-4 lg:px-10 py-2 lg:py-3 rounded bg-green-400 text-gray-100 hocus:bg-green-700 focus:shadow-outline focus:outline-none transition duration-300`;
+const AmountButton3 = tw.button`font-bold px-4 lg:px-10 py-2 lg:py-3 rounded bg-red-400 text-gray-100 hocus:bg-red-700 focus:shadow-outline focus:outline-none transition duration-300`;
+const AmountButton4 = tw.button`font-bold px-4 lg:px-10 py-2 lg:py-3 rounded bg-yellow-400 text-gray-100 hocus:bg-yellow-700 focus:shadow-outline focus:outline-none transition duration-300`;
+
+const Actions = tw.div`flex flex-col items-center sm:flex-row justify-center lg:justify-around  mt-4`;
+const PayStripeButton = tw.button`font-bold px-8 lg:px-10 py-3 my-5 lg:mr-10 rounded bg-primary-500 text-gray-100 hocus:bg-green-500 focus:shadow-outline focus:outline-none transition duration-300`;
+const PayPalButton = tw.button`font-bold px-8 lg:px-10 py-3 rounded bg-blue-500 text-gray-100 hocus:bg-green-500 focus:shadow-outline focus:outline-none transition duration-300`;
 
 const IllustrationContainer = tw.div`flex justify-center md:justify-end items-center relative max-w-3xl lg:max-w-none`;
 
@@ -110,11 +116,21 @@ export default ({
     </NavLinks>
   ];
 
-  const [amount, setAmount] = useState(1)
+  const [amount, setAmount] = useState(null)
 
-  const handleToken = () => {
-    alert('hi')
+  async function handleToken(token, addresses) {
+    const response = await axios.post("http://localhost:4242/checkout", { token, amount })
+    const { status } = response.data
+    console.log("Response: ", response.data)
+    console.log({ "status": status })
+
+    if (status === "Success") {
+      toast("Success! Check email for details", { type: "success" });
+    } else {
+      toast("Something went wrong, pleasse verify your card information and try again", { type: "error" });
+    }
   }
+  console.log(amount)
 
   return (
     <>
@@ -126,12 +142,33 @@ export default ({
             <Heading>{heading}</Heading>
             <Paragraph>{description}</Paragraph>
             <DecoratorBlob1 />
+            <SelectAmount>
+              <AmountButton1
+                value={5}
+                onClick={(e) => setAmount(+e.target.value)}> $5</AmountButton1>
+              <AmountButton2
+                value={10}
+                onClick={(e) => setAmount(+e.target.value)}>$10</AmountButton2>
+              <AmountButton3
+                value={15}
+                onClick={(e) => setAmount(+e.target.value)}>$15</AmountButton3>
+              <AmountButton4
+                value={20}
+                onClick={(e) => setAmount(+e.target.value)}>$20</AmountButton4>
+            </SelectAmount>
             <Actions>
               <StripeCheckout stripeKey="pk_test_51HZwqOIOzjuhc7bJRv25KUOeld7n95J0gfUV8x0hEuQ9MPzVGkBr0ISMvON3nkW27SXXw5LIoF0MNLCNt9jRXRBb00GVbarqvU"
                 amount={amount * 100}
                 token={handleToken}
                 name='Donacion Casa Hogar SCJ'
-              />
+                billingAddress
+                shippingAddress={false}
+                zipCode={false}
+                allowRememberMe
+              >
+                <PayStripeButton>{PaywithStripeText}</PayStripeButton>
+
+              </StripeCheckout>
               <PayPalButton >{PayPalButtonText}</PayPalButton>
 
             </Actions>
