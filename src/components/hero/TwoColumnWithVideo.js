@@ -5,8 +5,12 @@ import tw from "twin.macro";
 import { css } from "styled-components/macro";
 import axios from 'axios'
 
+import { makeStyles } from "@material-ui/core/styles";
+import TextField from "@material-ui/core/TextField";
+import Button from "@material-ui/core/Button";
+
 //stripe dependencies
-// import axios from 'react-axios'
+
 import StripeCheckout from "react-stripe-checkout";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -34,6 +38,13 @@ const StyledHeader = styled(Header)`
 //initialize toast 
 toast.configure();
 
+const useStyles = makeStyles((theme) => ({
+  root: {
+    marginRight: "1rem",
+    width: "20ch"
+  }
+}));
+
 const Container = tw.div`relative lg:bg-cover lg:h-screen lg:min-h-144`;
 const TwoColumn = tw.div`flex flex-col lg:flex-row md:items-center max-w-screen-xl mx-auto mt--10 lg:mt-32 py-20 md:py-24`;
 
@@ -44,16 +55,19 @@ const RightColumn = tw.div`relative mt-12 lg:mt-0 flex flex-col justify-center`;
 const Heading = tw.h1`font-black text-3xl md:text-5xl leading-snug max-w-3xl`;
 const Paragraph = tw.p`my-5 lg:my-8 text-sm lg:text-base font-medium text-gray-600 max-w-lg mx-auto lg:mx-0`;
 
-//Amount Buttons
-const SelectAmount = tw.div`flex flex-row justify-around content-center`
-const AmountButton1 = tw.button`font-bold px-4 lg:px-10 py-2 lg:py-3 rounded bg-orange-400 text-gray-100 hocus:bg-orange-700 focus:shadow-outline focus:outline-none transition duration-300`;
-const AmountButton2 = tw.button`font-bold px-4 lg:px-10 py-2 lg:py-3 rounded bg-green-400 text-gray-100 hocus:bg-green-700 focus:shadow-outline focus:outline-none transition duration-300`;
-const AmountButton3 = tw.button`font-bold px-4 lg:px-10 py-2 lg:py-3 rounded bg-red-400 text-gray-100 hocus:bg-red-700 focus:shadow-outline focus:outline-none transition duration-300`;
-const AmountButton4 = tw.button`font-bold px-4 lg:px-10 py-2 lg:py-3 rounded bg-yellow-400 text-gray-100 hocus:bg-yellow-700 focus:shadow-outline focus:outline-none transition duration-300`;
 
-const Actions = tw.div`flex flex-col items-center sm:flex-row justify-center lg:justify-around  mt-4`;
-const PayStripeButton = tw.button`font-bold px-8 lg:px-10 py-3 my-5 lg:mr-10 rounded bg-primary-500 text-gray-100 hocus:bg-green-500 focus:shadow-outline focus:outline-none transition duration-300`;
-const PayPalButton = tw.button`font-bold px-8 lg:px-10 py-3 rounded bg-blue-500 text-gray-100 hocus:bg-green-500 focus:shadow-outline focus:outline-none transition duration-300`;
+const SelectAmountParagraph = tw.p`my-5 lg:my-6 text-sm lg:text-base font-bold text-primary-500 max-w-lg mx-auto lg:mx-0`;
+
+const VarifyAmountParagraph = tw.p`mt-5 lg:mt-8 text-sm lg:text-base font-bold text-primary-500 max-w-lg mx-auto lg:mx-0`;
+
+//Amount Buttons
+const SelectAmount = tw.div`flex flex-row justify-around mb-6 lg:justify-between content-center`
+const AmountButton = tw.button`font-bold px-4 lg:px-10 py-2 lg:py-3 rounded bg-yellow-500 text-gray-100 hocus:bg-yellow-700 focus:shadow-outline focus:outline-none transition duration-300`;
+const AmountStyling = tw.span`text-red-600`
+
+const Actions = tw.div`flex flex-col items-center sm:flex-row justify-around lg:justify-start  mt-4`;
+const PayStripeButton = tw.button`font-bold px-8 lg:px-10 py-3 my-4 lg:mr-10 rounded bg-primary-500 text-gray-100 hocus:bg-green-500 focus:shadow-outline focus:outline-none transition duration-300`;
+
 
 const IllustrationContainer = tw.div`flex justify-center md:justify-end items-center relative max-w-3xl lg:max-w-none`;
 
@@ -61,15 +75,13 @@ const IllustrationContainer = tw.div`flex justify-center md:justify-end items-ce
 const DecoratorBlob1 = styled(SvgDecoratorBlob1)`
   ${tw`pointer-events-none opacity-15 absolute left-0 bottom-0 h-64 w-64 transform -translate-x-2/3  -z-10`}
 `;
-// const DecoratorBlob2 = styled(SvgDecoratorBlob2)`
-//   ${tw`pointer-events-none fill-current text-primary-500 opacity-25 absolute w-32 h-32 right-0 bottom-0 transform translate-x-10 translate-y-10 -z-10`}
-// `;
+
 
 export default ({
   heading = "Modern React Templates, Just For You",
   description = "Our templates are easy to setup, understand and customize. Fully modular components with a variety of pages and components.",
+  donaccionParagraph = 'Por favor seleccione su donacion:',
   PaywithStripeText = "Donar Con Tarjeta",
-  PayPalButtonText = 'Donar Con Paypal',
   imageSrc = DonarImage1,
   imageCss = null,
 
@@ -117,6 +129,8 @@ export default ({
   ];
 
   const [amount, setAmount] = useState(null)
+  const [otherAmount, setOtherAmount] = useState('')
+  const classes = useStyles();
 
   async function handleToken(token, addresses) {
     const response = await axios.post("http://localhost:4242/checkout", { token, amount })
@@ -130,7 +144,12 @@ export default ({
       toast("Something went wrong, pleasse verify your card information and try again", { type: "error" });
     }
   }
-  console.log(amount)
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setAmount(otherAmount)
+  };
+
 
   return (
     <>
@@ -142,20 +161,49 @@ export default ({
             <Heading>{heading}</Heading>
             <Paragraph>{description}</Paragraph>
             <DecoratorBlob1 />
+            <SelectAmountParagraph>{donaccionParagraph}</SelectAmountParagraph>
             <SelectAmount>
-              <AmountButton1
+              <AmountButton
                 value={5}
-                onClick={(e) => setAmount(+e.target.value)}> $5</AmountButton1>
-              <AmountButton2
+                onClick={(e) => {
+                  setAmount(+e.target.value)
+                  setOtherAmount('')
+                }}> $5</AmountButton>
+              <AmountButton
                 value={10}
-                onClick={(e) => setAmount(+e.target.value)}>$10</AmountButton2>
-              <AmountButton3
-                value={15}
-                onClick={(e) => setAmount(+e.target.value)}>$15</AmountButton3>
-              <AmountButton4
-                value={20}
-                onClick={(e) => setAmount(+e.target.value)}>$20</AmountButton4>
+                onClick={(e) => {
+                  setAmount(+e.target.value)
+                  setOtherAmount('')
+                }}>$10</AmountButton>
+              <AmountButton
+                value={25}
+                onClick={(e) => {
+                  setAmount(+e.target.value)
+                  setOtherAmount('')
+                }}>$25</AmountButton>
+              <AmountButton
+                value={50}
+                onClick={(e) => {
+                  setAmount(+e.target.value)
+                  setOtherAmount('')
+                }}>$50</AmountButton>
             </SelectAmount>
+            <form noValidate autoComplete="off" onSubmit={handleSubmit}>
+              <TextField
+                id="outlined-basic"
+                label="Cantidad"
+                variant="outlined"
+                value={otherAmount}
+                onChange={(e) => setOtherAmount(+e.target.value.replace(/[^0-9,.]/g, ""))}
+                size="small"
+                className={classes.root}
+              />
+
+              <Button variant="contained" color="primary" size="medium" type="submit">
+                submit
+            </Button>
+            </form>
+            {(amount !== null || amount === 0) && <VarifyAmountParagraph>Su targeta sera cargada con <AmountStyling>${amount}</AmountStyling> USD</VarifyAmountParagraph>}
             <Actions>
               <StripeCheckout stripeKey="pk_test_51HZwqOIOzjuhc7bJRv25KUOeld7n95J0gfUV8x0hEuQ9MPzVGkBr0ISMvON3nkW27SXXw5LIoF0MNLCNt9jRXRBb00GVbarqvU"
                 amount={amount * 100}
@@ -165,11 +213,12 @@ export default ({
                 shippingAddress={false}
                 zipCode={false}
                 allowRememberMe
+                disabled={amount === null || amount === 0}
               >
                 <PayStripeButton>{PaywithStripeText}</PayStripeButton>
 
               </StripeCheckout>
-              <PayPalButton >{PayPalButtonText}</PayPalButton>
+
 
             </Actions>
           </LeftColumn>
