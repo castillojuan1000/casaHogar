@@ -133,7 +133,7 @@ export default ({
   const classes = useStyles();
 
   async function handleToken(token, addresses) {
-    const response = await axios.post("http://localhost:4242/checkout", { token, amount })
+    const response = await axios.post("https://fathomless-sierra-99548.herokuapp.com/checkout", { token, amount })
     const { status } = response.data
     console.log("Response: ", response.data)
     console.log({ "status": status })
