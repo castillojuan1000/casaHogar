@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/casaHogar/static/css/main.d9188528.chunk.css",
-    "main.js": "/casaHogar/static/js/main.4312aefd.chunk.js",
-    "main.js.map": "/casaHogar/static/js/main.4312aefd.chunk.js.map",
+    "main.js": "/casaHogar/static/js/main.2d0ca645.chunk.js",
+    "main.js.map": "/casaHogar/static/js/main.2d0ca645.chunk.js.map",
     "runtime-main.js": "/casaHogar/static/js/runtime-main.c28e2440.js",
     "runtime-main.js.map": "/casaHogar/static/js/runtime-main.c28e2440.js.map",
     "static/css/2.1e92878d.chunk.css": "/casaHogar/static/css/2.1e92878d.chunk.css",
     "static/js/2.adf099c7.chunk.js": "/casaHogar/static/js/2.adf099c7.chunk.js",
     "static/js/2.adf099c7.chunk.js.map": "/casaHogar/static/js/2.adf099c7.chunk.js.map",
     "index.html": "/casaHogar/index.html",
-    "precache-manifest.e4af9f640b6308104bbcc8185c0c5d95.js": "/casaHogar/precache-manifest.e4af9f640b6308104bbcc8185c0c5d95.js",
+    "precache-manifest.41f00eda181ab6ee9db2a9643485de40.js": "/casaHogar/precache-manifest.41f00eda181ab6ee9db2a9643485de40.js",
     "service-worker.js": "/casaHogar/service-worker.js",
     "static/css/2.1e92878d.chunk.css.map": "/casaHogar/static/css/2.1e92878d.chunk.css.map",
     "static/css/main.d9188528.chunk.css.map": "/casaHogar/static/css/main.d9188528.chunk.css.map",
@@ -48,6 +48,6 @@
     "static/css/2.1e92878d.chunk.css",
     "static/js/2.adf099c7.chunk.js",
     "static/css/main.d9188528.chunk.css",
-    "static/js/main.4312aefd.chunk.js"
+    "static/js/main.2d0ca645.chunk.js"
   ]
 }
