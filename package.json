@@ -36,6 +36,7 @@
     "uuid": "^8.3.1",
     "uuidv4": "^6.2.4"
   },
+  "proxy": "http://localhost:4242",
   "scripts": {
     "server": "nodemon src/Server.js",
     "start": "react-scripts start",
