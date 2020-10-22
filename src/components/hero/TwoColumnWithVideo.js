@@ -140,6 +140,8 @@ export default ({
 
     if (status === "Success") {
       toast("Success! Check email for details", { type: "success" });
+      setAmount(null)
+      setOtherAmount('')
     } else {
       toast("Something went wrong, pleasse verify your card information and try again", { type: "error" });
     }
@@ -188,22 +190,26 @@ export default ({
                   setOtherAmount('')
                 }}>$50</AmountButton>
             </SelectAmount>
-            <form noValidate autoComplete="off" onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit}>
               <TextField
                 id="outlined-basic"
-                label="Cantidad"
+                label="Otra Cantidad"
                 variant="outlined"
                 value={otherAmount}
                 onChange={(e) => setOtherAmount(+e.target.value.replace(/[^0-9,.]/g, ""))}
                 size="small"
                 className={classes.root}
+                required
               />
 
               <Button variant="contained" color="primary" size="medium" type="submit">
                 submit
             </Button>
             </form>
-            {(amount !== null || amount === 0) && <VarifyAmountParagraph>Su targeta sera cargada con <AmountStyling>${amount}</AmountStyling> USD</VarifyAmountParagraph>}
+
+            {(amount !== null && amount !== 0) && <VarifyAmountParagraph>Su targeta sera cargada con <AmountStyling>${amount}</AmountStyling> USD</VarifyAmountParagraph>}
+
+
             <Actions>
               <StripeCheckout stripeKey="pk_test_51HZwqOIOzjuhc7bJRv25KUOeld7n95J0gfUV8x0hEuQ9MPzVGkBr0ISMvON3nkW27SXXw5LIoF0MNLCNt9jRXRBb00GVbarqvU"
                 amount={amount * 100}
