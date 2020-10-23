@@ -37,11 +37,11 @@ export const LogoLink = styled(NavLink)`
   ${tw`flex items-center text-center italic font-black border-b-0 text-xs! md:text-base! lg:text-lg! xl:text-xl! ml-0!`};
 
   img {
-    ${tw`mr-3 w-20 md:w-16 lg:w-20 xl:w-24 `}
+    ${tw`mr-3 w-20 md:w-20 lg:w-20 xl:w-24 `}
   }
 
   span{
-    ${tw`text-center italic font-black border-b-0 hidden md:inline lg:inline xl:inline
+    ${tw`text-center italic font-black border-b-0 hidden md:hidden lg:inline xl:inline
     text-xs! md:text-base! lg:text-lg! xl:text-xl! ml-0!`}
   }
 `;
