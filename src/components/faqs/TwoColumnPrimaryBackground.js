@@ -160,18 +160,14 @@ export default ({
         </RouterLink>
       </NavLink>
 
-    </NavLinks>,
-    <NavLinks key={2}>
-      {/* <PrimaryLink href="/#">
-        Hire Us
-      </PrimaryLink> */}
     </NavLinks>
   ];
 
   return (
     <PrimaryBackgroundContainer>
+      <StyledHeader links={navLinks} />
       <ContentWithPaddingXl>
-        <StyledHeader links={navLinks} />
+        
         <HeadingContainer>
           {subheading && <Subheading>{subheading}</Subheading>}
           <Heading>{heading}</Heading>

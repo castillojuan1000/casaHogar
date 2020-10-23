@@ -12,7 +12,7 @@ import Header, { NavLink, NavLinks, LogoLink, NavToggle, DesktopNavLinks } from 
 import { Link as RouterLink } from 'react-router-dom'
 
 const StyledHeader = styled(Header)`
-  ${tw`py-8  px-8 md:px-0 lg:px-0 xl:px-0 max-w-screen-xl w-full`}
+  ${tw`pt-8 px-8 lg:px-4 xl:px-4 max-w-none w-full absolute `}
   ${DesktopNavLinks} ${NavLink}, ${LogoLink} {
     ${tw`text-gray-800 hover:border-primary-500 hover:text-primary-500`}
   }
@@ -94,8 +94,6 @@ export default ({
         </RouterLink>
       </NavLink>
 
-    </NavLinks>,
-    <NavLinks key={2}>
     </NavLinks>
   ];
 
@@ -116,10 +114,13 @@ export default ({
 
 
   return (
+    <>
+    
+    
+    
     <Container>
-      <StyledHeader links={navLinks} />
+    <StyledHeader links={navLinks} />
       <TwoColumn>
-
         <ImageColumn>
           <Image imageSrc={EmailIllustrationSrc} />
         </ImageColumn>
@@ -139,5 +140,6 @@ export default ({
         </TextColumn>
       </TwoColumn>
     </Container>
+    </>
   );
 };

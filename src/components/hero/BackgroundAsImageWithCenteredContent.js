@@ -11,7 +11,7 @@ import smoothscroll from 'smoothscroll-polyfill';
 //Router Link
 import { Link as RouterLink } from 'react-router-dom'
 
-import Header, { NavLink, NavLinks, PrimaryLink as PrimaryLinkBase, LogoLink, NavToggle, DesktopNavLinks } from "../headers/light.js";
+import Header, { NavLink, NavLinks, LogoLink, NavToggle, DesktopNavLinks } from "../headers/light.js";
 
 const StyledHeader = styled(Header)`
   ${tw`pt-8 px-8 lg:px-4 xl:px-4 max-w-none w-full`}
@@ -81,11 +81,6 @@ export default () => {
         </RouterLink>
       </NavLink>
 
-    </NavLinks>,
-    <NavLinks key={2}>
-      {/* <PrimaryLink href="/#">
-        Hire Us
-      </PrimaryLink> */}
     </NavLinks>
   ];
 

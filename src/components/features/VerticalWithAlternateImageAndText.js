@@ -101,11 +101,6 @@ export default () => {
         </RouterLink>
       </NavLink>
 
-    </NavLinks>,
-    <NavLinks key={2}>
-      {/* <PrimaryLink href="/#">
-        Hire Us
-      </PrimaryLink> */}
     </NavLinks>
   ];
 
@@ -160,9 +155,9 @@ export default () => {
 
   return (
     <Container>
-
+      <StyledHeader links={navLinks} />
       <SingleColumn>
-        <StyledHeader links={navLinks} />
+        
         <HeadingInfoContainer>
           <HeadingTitle>PILARES DEL PROGRAMA</HeadingTitle>
           <HeadingDescription>

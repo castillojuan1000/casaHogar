@@ -66,7 +66,7 @@ const AmountButton = tw.button`font-bold px-4 lg:px-10 py-2 lg:py-3 rounded bg-y
 const AmountStyling = tw.span`text-red-600`
 
 const Actions = tw.div`flex flex-col items-center sm:flex-row justify-around lg:justify-start  mt-4`;
-const PayStripeButton = tw.button`font-bold px-8 lg:px-10 py-3 my-4 lg:mr-10 rounded bg-primary-500 text-gray-100 hocus:bg-green-500 focus:shadow-outline focus:outline-none transition duration-300`;
+const PayStripeButton = tw.button`font-bold px-8 lg:px-10 py-3 my-8 lg:mr-10 rounded bg-primary-500 text-gray-100 hocus:bg-green-500 focus:shadow-outline focus:outline-none transition duration-300`;
 
 
 const IllustrationContainer = tw.div`flex justify-center md:justify-end items-center relative max-w-3xl lg:max-w-none`;
@@ -120,11 +120,6 @@ export default ({
         </RouterLink>
       </NavLink>
 
-    </NavLinks>,
-    <NavLinks key={2}>
-      {/* <PrimaryLink href="/#">
-        Hire Us
-      </PrimaryLink> */}
     </NavLinks>
   ];
 
