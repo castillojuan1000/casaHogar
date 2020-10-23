@@ -27,7 +27,7 @@ import { Link as RouterLink } from 'react-router-dom'
 import Header, { NavLink, NavLinks, LogoLink, NavToggle, DesktopNavLinks } from "../headers/light.js";
 
 const StyledHeader = styled(Header)`
-  ${tw`pt-8 px-8 lg:px-4 xl:px-4 max-w-none w-full text-gray-900`}
+  ${tw`mx-6 mt-4 px-8 px-8 lg:px-4 xl:px-4 max-w-none w-full text-gray-900`}
   ${DesktopNavLinks} ${NavLink}, ${LogoLink} {
     ${tw`text-gray-900 hover:border-primary-500 hover:text-primary-500`}
   }
@@ -46,11 +46,11 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Container = tw.div`relative lg:bg-cover lg:h-screen lg:min-h-144`;
-const TwoColumn = tw.div`flex flex-col lg:flex-row md:items-center max-w-screen-xl mx-auto mt--10 lg:mt-32 py-20 md:py-24`;
+const TwoColumn = tw.div`flex flex-col lg:flex-row  md:items-center max-w-screen-xl mx-auto mt--10 lg:mt-16 py-20 md:py-24`;
 
 
 const LeftColumn = tw.div`relative lg:w-6/12 lg:pr-12 flex-shrink-0 text-center lg:text-left`;
-const RightColumn = tw.div`relative mt-12 lg:mt-0 flex flex-col justify-center`;
+const RightColumn = tw.div`relative mt-12 lg:mt-0 lg:ml-24 flex flex-col justify-center`;
 
 const Heading = tw.h1`font-black text-3xl md:text-5xl leading-snug max-w-3xl`;
 const Paragraph = tw.p`my-5 lg:my-8 text-sm lg:text-base font-medium text-gray-600 max-w-lg mx-auto lg:mx-0`;

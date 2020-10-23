@@ -12,7 +12,7 @@ import Header, { NavLink, NavLinks, LogoLink, NavToggle, DesktopNavLinks } from 
 import { Link as RouterLink } from 'react-router-dom'
 
 const StyledHeader = styled(Header)`
-  ${tw`pt-8 px-8 lg:px-4 xl:px-4 max-w-none w-full absolute `}
+  ${tw`mx-6 mt-4 px-8 px-8 lg:px-4 xl:px-4 max-w-none w-full`}
   ${DesktopNavLinks} ${NavLink}, ${LogoLink} {
     ${tw`text-gray-800 hover:border-primary-500 hover:text-primary-500`}
   }
@@ -23,7 +23,7 @@ const StyledHeader = styled(Header)`
 
 
 
-const Container = tw.div`relative min-h-screen`;
+const Container = tw.div`relative lg:bg-cover lg:h-screen lg:min-h-144`;
 const TwoColumn = tw.div`flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto py-20 md:py-24`;
 const Column = tw.div`w-full max-w-md mx-auto md:max-w-none md:mx-0`;
 const ImageColumn = tw(Column)`md:w-5/12 flex-shrink-0 h-80 md:h-auto`;
