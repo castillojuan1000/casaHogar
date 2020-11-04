@@ -38,7 +38,6 @@
   },
   "proxy": "http://localhost:4242",
   "scripts": {
-    "server": "nodemon src/Server.js",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -60,8 +59,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.4"
   }
 }
