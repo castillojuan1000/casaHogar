@@ -22,7 +22,7 @@ const LogoImg = tw.img`w-24 py-4 hidden md:inline lg:inline xl:inline`;
 // const LogoText = tw.h5`ml-2 text-2xl font-black tracking-wider`;
 
 const LinksContainer = tw.div`mt-3 md:mt-0 lg:mt-0 xl:mt-0 font-medium flex flex-wrap justify-center items-center flex-row sm:flex-row`
-const Link = tw.a`border-b-2 border-transparent hocus:text-gray-300 hocus:border-gray-300 pb-1 transition duration-300 mt-2 mx-4`;
+const Link = tw.a`border-b-2 border-transparent hocus:text-gray-300 hocus:border-gray-300 pb-1 transition duration-300 mt-2 mx-2 lg:mx-4 text-sm lg:text-base`;
 
 const ContactContainer = tw.div`my-3 flex justify-center flex-col items-center`
 const Phone = tw.div` text-gray-100 text-sm font-bold border-b-2 border-transparent hocus:text-gray-300 hocus:border-gray-300 pb-1 transition duration-300 mt-2 mx-4`
@@ -61,6 +61,12 @@ export default () => {
             <Link>
               <RouterLink to='/faqs'>
                 Preguntas
+              </RouterLink>
+            </Link>
+
+            <Link>
+              <RouterLink to='/donate'>
+                Donaciones
               </RouterLink>
             </Link>
 
