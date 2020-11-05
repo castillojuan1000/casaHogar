@@ -27,7 +27,7 @@ import { Link as RouterLink } from 'react-router-dom'
 import Header, { NavLink, NavLinks, LogoLink, NavToggle, DesktopNavLinks } from "../headers/light.js";
 
 const StyledHeader = styled(Header)`
-  ${tw`mx-6 mt-4 px-8 px-8 lg:px-4 xl:px-4 max-w-none w-full text-gray-900`}
+  ${tw`lg:mx-6 mt-4 px-8 px-8 lg:px-4 xl:px-4 max-w-none w-full text-gray-900`}
   ${DesktopNavLinks} ${NavLink}, ${LogoLink} {
     ${tw`text-gray-900 hover:border-primary-500 hover:text-primary-500`}
   }
