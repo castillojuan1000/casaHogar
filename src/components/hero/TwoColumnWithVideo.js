@@ -78,8 +78,8 @@ const DecoratorBlob1 = styled(SvgDecoratorBlob1)`
 
 
 export default ({
-  heading = "Modern React Templates, Just For You",
-  description = "Our templates are easy to setup, understand and customize. Fully modular components with a variety of pages and components.",
+  // heading = "Modern React Templates, Just For You",
+  description = "Agradecemos tus oraciones, tu confianza a nuestra mision y tus donaciones a este proyecto para seguir ayudando con amor a los jovenes a tener un encuentro con Jesus",
   donaccionParagraph = 'Por favor seleccione su donacion:',
   PaywithStripeText = "Donar Con Tarjeta",
   imageSrc = DonarImage1,
@@ -155,7 +155,7 @@ export default ({
       <Container>
         <TwoColumn>
           <LeftColumn>
-            <Heading>{heading}</Heading>
+            {/* <Heading>{heading}</Heading> */}
             <Paragraph>{description}</Paragraph>
             <DecoratorBlob1 />
             <SelectAmountParagraph>{donaccionParagraph}</SelectAmountParagraph>
