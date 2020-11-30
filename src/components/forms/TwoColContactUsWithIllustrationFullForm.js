@@ -23,7 +23,7 @@ const StyledHeader = styled(Header)`
 
 
 
-const Container = tw.div`relative lg:bg-cover lg:h-screen lg:min-h-144`;
+const Container = tw.div`relative `;
 const TwoColumn = tw.div`flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto py-20 md:py-24`;
 const Column = tw.div`w-full max-w-md mx-auto md:max-w-none md:mx-0`;
 const ImageColumn = tw(Column)`md:w-5/12 flex-shrink-0 h-80 md:h-auto`;
