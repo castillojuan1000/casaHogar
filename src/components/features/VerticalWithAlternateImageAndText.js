@@ -28,6 +28,8 @@ const StyledHeader = styled(Header)`
   }
 `;
 
+const MainTitle = tw(SectionHeading)`text-primary-500`
+
 const Heading = tw(
   SectionHeading
 )`mb-4 font-black text-left text-lg sm:text-lg lg:text-lg text-left md:text-left leading-tight text-primary-500`;
@@ -159,7 +161,7 @@ export default () => {
       <SingleColumn>
         
         <HeadingInfoContainer>
-          <HeadingTitle>PILARES DEL PROGRAMA</HeadingTitle>
+          <MainTitle>PILARES DEL PROGRAMA</MainTitle>
           <HeadingDescription>
             Los pilares son una parte esensial en el crecimiento y desarollo de la persona dentro del programa. El programa esta compuesto de 5 pilares con intension de fortalezer el espiritu, cuerpo y mente de la persona.
           </HeadingDescription>
