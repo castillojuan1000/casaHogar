@@ -14,26 +14,26 @@ import { Link as RouterLink } from 'react-router-dom'
 const StyledHeader = styled(Header)`
   ${tw` lg:mx-6  pt-4 px-8 lg:px-4 xl:px-4  pb-4 lg:pb-12 px-8  max-w-none w-full`}
   ${DesktopNavLinks} ${NavLink}, ${LogoLink} {
-    ${tw`text-gray-100 hover:border-primary-100 hover:text-primary-100`}
+    ${tw`text-gray-900 hover:border-primary-100 hover:text-primary-100`}
   }
   ${NavToggle}.closed {
-    ${tw`text-gray-100 hover:text-gray-400`}
+    ${tw`text-gray-900 hover:text-gray-400`}
   }
 `;
 
 
 
-const PrimaryBackgroundContainer = tw(Container)`-mx-8 px-8 h-auto  lg:h-screen xl:h-screen bg-primary-500 text-gray-100`;
+const PrimaryBackgroundContainer = tw(Container)`-mx-8 px-8 h-auto  lg:h-screen xl:h-screen bg-gray-100 text-gray-900`;
 const ContentWithPaddingXl = tw.div`max-w-screen-xl mx-auto pt-4 lg:py-12`;
 
 const HeadingContainer = tw.div``;
 const Subheading = tw(SubheadingBase)`text-center text-gray-100 mb-4`;
-const Heading = tw(SectionHeading)``;
+const Heading = tw(SectionHeading)`text-primary-500`;
 // const Description = tw(SectionDescription)`mx-auto px-6 text-center text-gray-300`;
 
 const FaqsContainer = tw.div`mt-10 sm:mt-16 px-6 w-full flex-1 lg:flex justify-between items-start max-w-screen-lg mx-auto`;
 const FaqsColumn = tw.div`w-full lg:max-w-lg lg:mr-12 last:mr-0`;
-const Faq = tw.div`select-none cursor-pointer border-b-2 border-primary-300 hover:border-primary-500 transition-colors duration-300 py-6`;
+const Faq = tw.div`select-none cursor-pointer border-b-2 border-gray-300 hover:border-primary-500 transition-colors duration-300 py-6`;
 const Question = tw.div`flex justify-between items-center`;
 const QuestionText = tw.div`text-sm sm:text-lg font-semibold tracking-wide`;
 const QuestionToggleIcon = styled(motion.span)`
@@ -42,7 +42,7 @@ const QuestionToggleIcon = styled(motion.span)`
     ${tw`w-6 h-6`}
   }
 `;
-const Answer = tw(motion.div)`hidden text-sm font-normal mt-4 text-gray-300`;
+const Answer = tw(motion.div)`hidden text-sm font-normal mt-4 text-primary-500 font-bold`;
 export default ({
 
   subheading = "",
