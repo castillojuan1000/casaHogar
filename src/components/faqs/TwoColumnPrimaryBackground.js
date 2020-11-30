@@ -23,7 +23,7 @@ const StyledHeader = styled(Header)`
 
 
 
-const PrimaryBackgroundContainer = tw(Container)`-mx-8 px-8 h-auto  lg:h-screen xl:h-screen bg-primary-900 text-gray-100`;
+const PrimaryBackgroundContainer = tw(Container)`-mx-8 px-8 h-auto  lg:h-screen xl:h-screen bg-primary-500 text-gray-100`;
 const ContentWithPaddingXl = tw.div`max-w-screen-xl mx-auto pt-4 lg:py-12`;
 
 const HeadingContainer = tw.div``;
@@ -50,34 +50,35 @@ export default ({
   description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   faqs = [
     {
-      question: "El programa es solo para los addictos a las drogas ?",
+      question: "¿Qué es el programa FIM?",
       answer:
-        "Yes, it is, if you have a membership with us. Otherwise it is charged as per the menu. Some limits do apply as to how much items can be included in your lunch. This limit is enough for any one person and merely exists to discourage abusal of the system."
+        "Formación Integral Misionera (FIM), tiene como principal objectivo formar a los jovenes en todos los aspectos: espiritual, psicologico y fisico. Formarles los valores que por las addicciones perdieron, solo por mencionar algunos: respecto, honestidad, tolerancia, paciencia, disiplina, gratitud, responsabilidad, autoestima y autodominio... Y en lo espiritual a tener un encuentro con Dios, hasta llegar adquirir una vida espiritual ya que sera su fuerza de toda la vida."
     },
     {
-      question: "Es el programa solo para hombres ?",
+      question: "¿Cuáles son los requisitos para entrar al programa FIM?",
       answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        " Ser mayores de 18 años, reconocer que se tiene un problema y necesita ayuda, tener un mínimo de apstinencia de sustancia adictiva de 5 -7 dias. Tener disposición de dejar todas las addicciones. Al ser aceptado para ingresar a la Casa Hogar SCJ y vivir su programa FIM, a los jovenes no se les permite ninguna sustancia de adiccion al comenzar el programa. Tener disposición, paciencia y humildad de aceptar los sintomas de la desintoxicación natural y dejar solo actuar a Dios en su recuperación y sanaciòn integra. Es muy importante reconocer y creer que Dios sera su mejor Doctor. A demas el mejor amigo que de ahora en adelante les ayudara en todo su proceso de recuperación y sanación en su nuevo caminar de ahora en adelante, asta llegar a ser hombres nuevos."
     },
     {
-      question: "Cual es la edad para poder ingresar ?",
+      question: "¿Para quién es el programa FIM?",
       answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        "Para jóvenes que tienen problemas con las addicciones de alcohol, drogas, pornografia..., tambien para personas que no le encuentran sentido a la vida, que buscan descubrir su vocación o quieren tener un encuentro con Dios."
+    },
+    
+    {
+      question: "Quiero ayudar con el programa FIM, ¿cómo puedo hacerlo?",
+      answer:
+        "Con tus oraciones, tu tiempo, talentos y donacion economica."
     },
     {
-      question: "Quiero ayudar con el programa, que necesito hacer ?",
+      question: "¿Cúal es el costo del programa FIM? ",
       answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        "El programa es gratis. Se tiene una confianza absoluta a la Divina Providencia, que se hace presente en las donaciones de las personas generosas y de sus familiares de los jovenes que viven el programa."
     },
     {
-      question: "Cual es el costo del programa ? ",
+      question: "¿Cúal es la duración del programa FIM?",
       answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-    },
-    {
-      question: "Cual es la duracion del programa ?",
-      answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "El programa FIM es un tiempo de 3 años con un minino de 9 meses.",
     }
   ]
 }) => {
