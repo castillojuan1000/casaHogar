@@ -48,7 +48,7 @@ const Textarea = styled(Input).attrs({ as: "textarea" })`
   ${tw`h-24`}
 `
 
-const SubmitButton = tw(PrimaryButtonBase)`inline-block mt-8`
+const SubmitButton = tw(PrimaryButtonBase)`inline-block mt-8 max-w-xs md:max-w-md lg:max-w-md mx-6 md:mx-0 lg:mx-0`
 
 export default ({
   subheading = "Contactanos",
